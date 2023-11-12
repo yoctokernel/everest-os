@@ -58,18 +58,18 @@ struct proc_state {
     uint64_t rbx;    ///< general purpose B register
     uint64_t rcx;    ///< general purpose C register
     uint64_t rdx;    ///< general purpose D register
-	uint64_t rsi;    ///< the source index register
-	uint64_t rdi;    ///< the destination index register
-	uint64_t rbp;    ///< the frame pointer register
-	uint64_t rsp;    ///< the stack pointer register
-	uint64_t r8;     ///< the R8 (64-bit extension) register
-	uint64_t r9;     ///< the R9 (64-bit extension) register
-	uint64_t r10;    ///< the R10 (64-bit extension) register
-	uint64_t r11;    ///< the R11 (64-bit extension) register
-	uint64_t r12;    ///< the R12 (64-bit extension) register
-	uint64_t r13;    ///< the R13 (64-bit extension) register
-	uint64_t r14;    ///< the R14 (64-bit extension) register
-	uint64_t r15;    ///< the R15 (64-bit extension) register
+    uint64_t rsi;    ///< the source index register
+    uint64_t rdi;    ///< the destination index register
+    uint64_t rbp;    ///< the frame pointer register
+    uint64_t rsp;    ///< the stack pointer register
+    uint64_t r8;     ///< the R8 (64-bit extension) register
+    uint64_t r9;     ///< the R9 (64-bit extension) register
+    uint64_t r10;    ///< the R10 (64-bit extension) register
+    uint64_t r11;    ///< the R11 (64-bit extension) register
+    uint64_t r12;    ///< the R12 (64-bit extension) register
+    uint64_t r13;    ///< the R13 (64-bit extension) register
+    uint64_t r14;    ///< the R14 (64-bit extension) register
+    uint64_t r15;    ///< the R15 (64-bit extension) register
 	uint64_t rflags; ///< the processor state register 
 };
 
@@ -122,13 +122,16 @@ struct idt_ptr {
     struct idt_entry *table; ///< pointer to IDT (table)
 } __attribute__((packed));
 
-void     _cpuid(struct proc_state *regs, uint32_t leaf);
-void     _lgdt (struct gdt_entry *gdt, size_t table_size);
-void     _lidt (struct idt_entry *idt, size_t table_size);
-void     _sgdt (struct gdt_ptr *gdtr);
-void     _sidt (struct idt_ptr *idtr);
-uint64_t _rdmsr(uint32_t msr);
-void     _wrmsr(uint32_t msr, uint64_t val);
+void     _cpuid  (struct proc_state *regs, uint32_t leaf);
+void     _lgdt   (struct gdt_entry *gdt, size_t table_size);
+void     _lidt   (struct idt_entry *idt, size_t table_size);
+void     _sgdt   (struct gdt_ptr *gdtr);
+void     _sidt   (struct idt_ptr *idtr);
+uint64_t _rdmsr  (uint32_t msr);
+uint64_t _rdtsc  (void);
+void     _wrmsr  (uint32_t msr, uint64_t val);
+void     _syscall(struct proc_state *regs);
+void     _swapgs (void) __attribute__((naked));
 
 #ifdef __cplusplus
 }
