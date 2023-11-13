@@ -43,11 +43,11 @@
 /// @see
 uint64_t _rdtsc(void) __attribute__((naked))
 {
-	uint64_t tsc = 0;
-	asm volatile (
-		"rdtsc              \n"
-		"shlq  %%rdx, $32   \n"
-		"orq   %%rdx, %%rax \n"
-		: "=a" (tsc) );
-	return (tsc);
+    uint64_t tsc = 0;
+    asm volatile (
+        "rdtsc              \n"
+        "shlq  %%rdx, $32   \n"
+        "orq   %%rdx, %%rax \n"
+        : "=a" (tsc) );
+    return (tsc);
 }
