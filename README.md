@@ -1,2 +1,7 @@
-# everest-os
-A basic Unix-like operating system built for educational purposes
+# The *Everest* Operating System
+
+*Everest* is a basic Unix-like operating system built for educational purposes. Developed as a part of an upcoming book in operating systems, Everest seeks to explore the basics of hobbyist operating system design through the development of a real Unix kernel. To encourage users to experiment, remix, and extend the lessons learned through Everest, it is licensed under the permissive 3-clause ("New") BSD license.
+
+In terms of architecture, Everest is a monolithic kernel implementing classical Unix features. Initially, its system call offerings place it on par with late [ancient UNIX](https://en.wikipedia.org/wiki/Ancient_UNIX) and early [System III](https://en.wikipedia.org/wiki/UNIX_System_III) releases, with some adjustments and additions to support modern computers. It is intended to boot using UEFI bootloaders; as part of the book, a basic custom bootloader will be built for the purpose although GRUB may be targeted at a later date. It is important to note that Everest does not seek to be "yet another Linux"; as an educational experiment, Everest is intended for simplicity, clarity, and ease of use.
+
+The Everest project is developed primarily in the C++ programming language, with the early name "C with classes" being an apt descriptor for the language choice - C++ is primarily used for its improved namespace (class) model, and related functions (such as memory management or interrupt interfaces) are grouped into classes that exclusively oversee those respective areas of responsibility. The source code itself places an emphasis on readability and self-documentation; kernel documentation is generated through Doxygen and additional notes will be placed within this repository where necessary.
