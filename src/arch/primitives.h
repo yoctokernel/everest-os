@@ -10,7 +10,7 @@
 // |                     as the 64-bit versions of descriptor tables.                                                  |
 // | License:            3-Clause ("New") BSD                                                                          |
 // | Created:            November 11, 2023                                                                             |
-// | Last Modified:      November 12, 2023                                                                             |
+// | Last Modified:      November 13, 2023                                                                             |
 // +-------------------------------------------------------------------------------------------------------------------+
 // | Copyright (c) 2023 Elijah Creed Fedele (ecfedele@proton.me)                                                       |
 // | All rights reserved.                                                                                              |
@@ -42,6 +42,16 @@
 
 #include "arch/msrs.h"
 
+#define GDT_ACC_PRESENT  0x80
+#define GDT_ACC_SYS      0x11
+#define GDT_ACC_CODE     0x09
+#define GDT_ACC_DATA     0x01
+#define GDT_ACC_DC       0x04
+#define GDT_ACC_RW       0x02
+#define GDT_FLAGS_GRAN4K 0x80
+#define GDT_FLAGS_PM32   0x40
+#define GDT_FLAGS_LM64   0x20
+
 #ifndef PRIMITIVES_H
 #define PRIMITIVES_H
 
@@ -70,7 +80,7 @@ struct proc_state {
     uint64_t r13;    ///< the R13 (64-bit extension) register
     uint64_t r14;    ///< the R14 (64-bit extension) register
     uint64_t r15;    ///< the R15 (64-bit extension) register
-	uint64_t rflags; ///< the processor state register 
+    uint64_t rflags; ///< the processor state register 
 };
 
 /// @struct gdt_entry
@@ -128,7 +138,7 @@ void     _lidt   (struct idt_entry *idt, size_t table_size);
 void     _sgdt   (struct gdt_ptr *gdtr);
 void     _sidt   (struct idt_ptr *idtr);
 uint64_t _rdmsr  (uint32_t msr);
-uint64_t _rdtsc  (void);
+uint64_t _rdtsc  (void) __attribute__((naked));
 void     _wrmsr  (uint32_t msr, uint64_t val);
 void     _syscall(struct proc_state *regs);
 void     _swapgs (void) __attribute__((naked));
