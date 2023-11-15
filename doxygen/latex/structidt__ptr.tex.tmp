@@ -1,0 +1,30 @@
+\hypertarget{structidt__ptr}{}\doxysection{idt\+\_\+ptr Struct Reference}
+\label{structidt__ptr}\index{idt\_ptr@{idt\_ptr}}
+
+
+{\ttfamily \#include $<$primitives.\+h$>$}
+
+
+
+Collaboration diagram for idt\+\_\+ptr\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structidt__ptr_a76beacc70bde3b6f91e4a97e94474d0d}\label{structidt__ptr_a76beacc70bde3b6f91e4a97e94474d0d}} 
+uint16\+\_\+t \mbox{\hyperlink{structidt__ptr_a76beacc70bde3b6f91e4a97e94474d0d}{size}}
+\begin{DoxyCompactList}\small\item\em size of the table \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structidt__ptr_a7428624de2747c7dca482530ba424e03}\label{structidt__ptr_a7428624de2747c7dca482530ba424e03}} 
+struct \mbox{\hyperlink{structidt__entry}{idt\+\_\+entry}} $\ast$ \mbox{\hyperlink{structidt__ptr_a7428624de2747c7dca482530ba424e03}{table}}
+\begin{DoxyCompactList}\small\item\em pointer to IDT (table) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides a convenient C/\+C++ structure for receiving results from the SIDT (Store Interrupt Descriptor Table Register) instruction. The \+\_\+sidt function declared below will adjust the \mbox{\hyperlink{structidt__ptr_a76beacc70bde3b6f91e4a97e94474d0d}{idt\+\_\+ptr\+::size}} field appropriately. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structidt__entry}{idt\+\_\+entry}}, \+\_\+sidt 
+\end{DoxySeeAlso}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+kernel/arch/primitives.\+h\end{DoxyCompactItemize}

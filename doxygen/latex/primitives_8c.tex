@@ -1,0 +1,106 @@
+\hypertarget{primitives_8c}{}\doxysection{kernel/arch/primitives.c File Reference}
+\label{primitives_8c}\index{kernel/arch/primitives.c@{kernel/arch/primitives.c}}
+{\ttfamily \#include \char`\"{}arch/primitives.\+h\char`\"{}}\newline
+Include dependency graph for primitives.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{primitives_8c_a2bec548c1619329a6caa46677cff7dad}{\+\_\+cli}} (void)
+\item 
+void \mbox{\hyperlink{primitives_8c_a2e4684308feb04244f5ebc398b944eba}{\+\_\+cpuid}} (struct \mbox{\hyperlink{structproc__state}{proc\+\_\+state}} $\ast$regs, uint32\+\_\+t leaf)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{primitives_8c_a337bb2771921f06067aaffa8f56e2b8c}{\+\_\+inb}} (uint16\+\_\+t port)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{primitives_8c_af28a640964fcad6dca19e9a3286aeda6}{\+\_\+inw}} (uint16\+\_\+t port)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{primitives_8c_a61ddbb9f75fe31d8af70d6354843d9aa}{\+\_\+ind}} (uint16\+\_\+t port)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{primitives_8c_a930446e7079616890873b6bdd8fdf135}{\+\_\+rdtsc}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{primitives_8c_a2bec548c1619329a6caa46677cff7dad}\label{primitives_8c_a2bec548c1619329a6caa46677cff7dad}} 
+\index{primitives.c@{primitives.c}!\_cli@{\_cli}}
+\index{\_cli@{\_cli}!primitives.c@{primitives.c}}
+\doxysubsubsection{\texorpdfstring{\_cli()}{\_cli()}}
+{\footnotesize\ttfamily void \+\_\+cli (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{primitives_8c_a2e4684308feb04244f5ebc398b944eba}\label{primitives_8c_a2e4684308feb04244f5ebc398b944eba}} 
+\index{primitives.c@{primitives.c}!\_cpuid@{\_cpuid}}
+\index{\_cpuid@{\_cpuid}!primitives.c@{primitives.c}}
+\doxysubsubsection{\texorpdfstring{\_cpuid()}{\_cpuid()}}
+{\footnotesize\ttfamily \+\_\+cpuid (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structproc__state}{proc\+\_\+state}} $\ast$}]{regs,  }\item[{uint32\+\_\+t}]{leaf }\end{DoxyParamCaption})}
+
+Executes the {\ttfamily CPUID} processor-\/identification instruction with the {\ttfamily leaf} argument placed in {\ttfamily EAX}. The {\ttfamily CPUID} instruction is used for determination of processor capabilities and features. Depending on the specific argument placed in {\ttfamily EAX} prior to execution, the {\ttfamily CPUID} instruction will return various elements of information. These can range from vendor identification strings ({\ttfamily EAX = 00h}) to complex bitwise-\/encoded flags about instruction sets and processor caching capabilities. Intel has published an entire 128-\/page application note on this subject; for more information, see Intel Corporation (2012) AP-\/485.
+
+There are obscure ways to test for the presence of the {\ttfamily CPUID} instruction prior to executing it, a practice which should always be performed when potentially executing an instruction for which hardware support is not explicitly known at runtime. However, all modern x86 CPUs support this instruction, and the few that do not (early model 486s and earlier) are too historical to be supported by most operating systems and the presence of {\ttfamily CPUID} can safely be assumed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em regs} & a pointer to an instance of a processor state struct to store the output of {\ttfamily CPUID}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em leaf} & the argument supplied to the {\ttfamily CPUID} instruction \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+struct \mbox{\hyperlink{structproc__state}{proc\+\_\+state}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{primitives_8c_a337bb2771921f06067aaffa8f56e2b8c}\label{primitives_8c_a337bb2771921f06067aaffa8f56e2b8c}} 
+\index{primitives.c@{primitives.c}!\_inb@{\_inb}}
+\index{\_inb@{\_inb}!primitives.c@{primitives.c}}
+\doxysubsubsection{\texorpdfstring{\_inb()}{\_inb()}}
+{\footnotesize\ttfamily \+\_\+inb (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})}
+
+Reads and returns a byte value from the I/O bus location specified by {\ttfamily port}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{primitives_8c_a61ddbb9f75fe31d8af70d6354843d9aa}\label{primitives_8c_a61ddbb9f75fe31d8af70d6354843d9aa}} 
+\index{primitives.c@{primitives.c}!\_ind@{\_ind}}
+\index{\_ind@{\_ind}!primitives.c@{primitives.c}}
+\doxysubsubsection{\texorpdfstring{\_ind()}{\_ind()}}
+{\footnotesize\ttfamily \+\_\+ind (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})}
+
+Reads and returns a doubleword (32-\/bit) value from the I/O bus location specified by {\ttfamily port}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{primitives_8c_af28a640964fcad6dca19e9a3286aeda6}\label{primitives_8c_af28a640964fcad6dca19e9a3286aeda6}} 
+\index{primitives.c@{primitives.c}!\_inw@{\_inw}}
+\index{\_inw@{\_inw}!primitives.c@{primitives.c}}
+\doxysubsubsection{\texorpdfstring{\_inw()}{\_inw()}}
+{\footnotesize\ttfamily \+\_\+inw (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})}
+
+Reads and returns a word (16-\/bit) value from the I/O bus location specified by {\ttfamily port}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{primitives_8c_a930446e7079616890873b6bdd8fdf135}\label{primitives_8c_a930446e7079616890873b6bdd8fdf135}} 
+\index{primitives.c@{primitives.c}!\_rdtsc@{\_rdtsc}}
+\index{\_rdtsc@{\_rdtsc}!primitives.c@{primitives.c}}
+\doxysubsubsection{\texorpdfstring{\_rdtsc()}{\_rdtsc()}}
+{\footnotesize\ttfamily \+\_\+rdtsc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Reads the value of the x86 Time Stamp Counter (TSC) register (MSR 10h). Returns this value to the user as a 64-\/bit integer. This function is tagged naked to avoid the generation of function prologues and epilogues to improve accuracy when reading the TSC -\/ both registers modified by {\ttfamily RDTSC} are volatile per the System V x86-\/64 ABI and no framing occurs within. \begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}

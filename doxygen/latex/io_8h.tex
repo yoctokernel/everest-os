@@ -1,0 +1,328 @@
+\hypertarget{io_8h}{}\doxysection{kernel/arch/io.h File Reference}
+\label{io_8h}\index{kernel/arch/io.h@{kernel/arch/io.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{io_8h_ab8e5cf871f5e911fd38d1bc6bcc379a7}{PORT\+\_\+8237\+\_\+\+CH0\+\_\+\+BASE\+\_\+\+ADDR}}~0x0000
+\item 
+\#define \mbox{\hyperlink{io_8h_adc8ed8c767e1b7415e40430facfa08b3}{PORT\+\_\+8237\+\_\+\+CH0\+\_\+\+WORD\+\_\+\+COUNT}}~0x0001
+\item 
+\#define \mbox{\hyperlink{io_8h_a478cfab666f90290b9a85da9a6d43238}{PORT\+\_\+8237\+\_\+\+CH1\+\_\+\+BASE\+\_\+\+ADDR}}~0x0002
+\item 
+\#define \mbox{\hyperlink{io_8h_a1d3ffb33f2231a9cd9aad61d5b30ca7c}{PORT\+\_\+8237\+\_\+\+CH1\+\_\+\+WORD\+\_\+\+COUNT}}~0x0003
+\item 
+\#define \mbox{\hyperlink{io_8h_a5e297e36d6d93bf448cd76896964cf67}{PORT\+\_\+8237\+\_\+\+CH2\+\_\+\+BASE\+\_\+\+ADDR}}~0x0004
+\item 
+\#define \mbox{\hyperlink{io_8h_a53609b1c354dfeee1b38ede3f80e7700}{PORT\+\_\+8237\+\_\+\+CH2\+\_\+\+WORD\+\_\+\+COUNT}}~0x0005
+\item 
+\#define \mbox{\hyperlink{io_8h_a32b54b3cb7c9223c7bf6027ae41b7660}{PORT\+\_\+8237\+\_\+\+CH3\+\_\+\+BASE\+\_\+\+ADDR}}~0x0006
+\item 
+\#define \mbox{\hyperlink{io_8h_ae93091003bf86cc3e7a813862a172583}{PORT\+\_\+8237\+\_\+\+CH3\+\_\+\+WORD\+\_\+\+COUNT}}~0x0007
+\item 
+\#define \mbox{\hyperlink{io_8h_a652f57e6100e1bb2f7ebc0230c963a14}{PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+STATCOM}}~0x0008
+\item 
+\#define \mbox{\hyperlink{io_8h_a62d27337f120afef29acb919ca5ed5b8}{PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+WRITEREQ}}~0x0009
+\item 
+\#define \mbox{\hyperlink{io_8h_ae7e035af046ea0056e905ef67ce15788}{PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+MASK}}~0x000A
+\item 
+\#define \mbox{\hyperlink{io_8h_a830bd2bdce2b56d8712f9670575ce88f}{PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+MODE}}~0x000B
+\item 
+\#define \mbox{\hyperlink{io_8h_a3c23b1eced5bf35d6777c18c63610290}{PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+CLRBYTE}}~0x000C
+\item 
+\#define \mbox{\hyperlink{io_8h_a5f80462226713bcf5891ba5179f0dfcd}{PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+RESET}}~0x000D
+\item 
+\#define \mbox{\hyperlink{io_8h_a0f43bd5cf172613dac4183e245cbab9b}{PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+CLRMASK}}~0x000E
+\item 
+\#define \mbox{\hyperlink{io_8h_a93797fec4ce6ad518f64e008de609c43}{PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+WRITEMASK}}~0x000F
+\item 
+\#define \mbox{\hyperlink{io_8h_a1d10d1e55f25618a3b1aa3d89b6292ca}{PORT\+\_\+8259\+\_\+\+PRI\+\_\+\+COMMAND}}~0x0020
+\item 
+\#define \mbox{\hyperlink{io_8h_a186fb228b6c24e899435b234fed85bcb}{PORT\+\_\+8259\+\_\+\+PRI\+\_\+\+DATA}}~0x0021
+\item 
+\#define \mbox{\hyperlink{io_8h_a7738bd87cc2fa7059296c7ae0a77ca20}{PORT\+\_\+8254\+\_\+\+CH0\+\_\+\+DATA}}~0x0040
+\item 
+\#define \mbox{\hyperlink{io_8h_a348349d3f7eddcfae07c1dbf063f457d}{PORT\+\_\+8254\+\_\+\+CH1\+\_\+\+DATA}}~0x0041
+\item 
+\#define \mbox{\hyperlink{io_8h_aa3afc7a114dd67f0748ab566fc4a0601}{PORT\+\_\+8254\+\_\+\+CH2\+\_\+\+DATA}}~0x0042
+\item 
+\#define \mbox{\hyperlink{io_8h_a5a53c8e4f4c33b7d9e4673009760dee7}{PORT\+\_\+8254\+\_\+\+MODE\+\_\+\+CMD}}~0x0043
+\item 
+\#define \mbox{\hyperlink{io_8h_a21951d044773742e048b53e340b36574}{PORT\+\_\+8259\+\_\+\+SEC\+\_\+\+COMMAND}}~0x00\+A0
+\item 
+\#define \mbox{\hyperlink{io_8h_ab1827596ecd1a7cf048842e065cf4ad0}{PORT\+\_\+8259\+\_\+\+SEC\+\_\+\+DATA}}~0x00\+A1
+\item 
+\#define \mbox{\hyperlink{io_8h_a4419b7d8ff7b61e63511ec9bb404772f}{PORT\+\_\+8237\+\_\+\+CH4\+\_\+\+BASE\+\_\+\+ADDR}}~0x00\+C0
+\item 
+\#define \mbox{\hyperlink{io_8h_a7c5f2fbec595e6ccc5aa70e687d9e9f0}{PORT\+\_\+8237\+\_\+\+CH4\+\_\+\+WORD\+\_\+\+COUNT}}~0x00\+C2
+\item 
+\#define \mbox{\hyperlink{io_8h_a1b7ba9a719503fca0b8439c1d56acb18}{PORT\+\_\+8237\+\_\+\+CH5\+\_\+\+BASE\+\_\+\+ADDR}}~0x00\+C4
+\item 
+\#define \mbox{\hyperlink{io_8h_aa3c462d4af3881574e6371d5ab9757b8}{PORT\+\_\+8237\+\_\+\+CH5\+\_\+\+WORD\+\_\+\+COUNT}}~0x00\+C6
+\item 
+\#define \mbox{\hyperlink{io_8h_ade991d3a7edba9cc11584a9e7eb17cd8}{PORT\+\_\+8237\+\_\+\+CH6\+\_\+\+BASE\+\_\+\+ADDR}}~0x00\+C8
+\item 
+\#define \mbox{\hyperlink{io_8h_afb2889ce5928290b0ae78b24301ad1f7}{PORT\+\_\+8237\+\_\+\+CH6\+\_\+\+WORD\+\_\+\+COUNT}}~0x00\+CA
+\item 
+\#define \mbox{\hyperlink{io_8h_a80f445febfdca8d0d2a403dc15dd676f}{PORT\+\_\+8237\+\_\+\+CH7\+\_\+\+BASE\+\_\+\+ADDR}}~0x00\+CC
+\item 
+\#define \mbox{\hyperlink{io_8h_ab1e1087ce383a5b4c09da351763ce155}{PORT\+\_\+8237\+\_\+\+CH7\+\_\+\+WORD\+\_\+\+COUNT}}~0x00\+CE
+\item 
+\#define \mbox{\hyperlink{io_8h_af96104ca88767823a060df18592f9a44}{PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+STATCOM}}~0x00\+D0
+\item 
+\#define \mbox{\hyperlink{io_8h_ae26164eb90e2aa49ea603a49b7ca3ace}{PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+WRITEREQ}}~0x00\+D2
+\item 
+\#define \mbox{\hyperlink{io_8h_af9da8feb4592a8da74f22cb7830eef98}{PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+MASK}}~0x00\+D4
+\item 
+\#define \mbox{\hyperlink{io_8h_a94bc6fbbfa1dd8e8ca116bcaeab8215e}{PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+MODE}}~0x00\+D6
+\item 
+\#define \mbox{\hyperlink{io_8h_a6a550392b3e82efb5443edcc714d6102}{PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+CLRBYTE}}~0x00\+D8
+\item 
+\#define \mbox{\hyperlink{io_8h_a39bc9bf4cbb3e340dc50817e141b3f14}{PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+RESET}}~0x00\+DA
+\item 
+\#define \mbox{\hyperlink{io_8h_afe13411473a1f815ce3eca4e1d5ddd5c}{PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+CLRMASK}}~0x00\+DC
+\item 
+\#define \mbox{\hyperlink{io_8h_a475d33a12151fc31b168889b29d62989}{PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+WRITEMASK}}~0x00\+DE
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{io_8h_a3c23b1eced5bf35d6777c18c63610290}\label{io_8h_a3c23b1eced5bf35d6777c18c63610290}} 
+\index{io.h@{io.h}!PORT\_8237\_CH03\_CLRBYTE@{PORT\_8237\_CH03\_CLRBYTE}}
+\index{PORT\_8237\_CH03\_CLRBYTE@{PORT\_8237\_CH03\_CLRBYTE}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH03\_CLRBYTE}{PORT\_8237\_CH03\_CLRBYTE}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+CLRBYTE~0x000C}
+
+\mbox{\Hypertarget{io_8h_a0f43bd5cf172613dac4183e245cbab9b}\label{io_8h_a0f43bd5cf172613dac4183e245cbab9b}} 
+\index{io.h@{io.h}!PORT\_8237\_CH03\_CLRMASK@{PORT\_8237\_CH03\_CLRMASK}}
+\index{PORT\_8237\_CH03\_CLRMASK@{PORT\_8237\_CH03\_CLRMASK}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH03\_CLRMASK}{PORT\_8237\_CH03\_CLRMASK}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+CLRMASK~0x000E}
+
+\mbox{\Hypertarget{io_8h_ae7e035af046ea0056e905ef67ce15788}\label{io_8h_ae7e035af046ea0056e905ef67ce15788}} 
+\index{io.h@{io.h}!PORT\_8237\_CH03\_MASK@{PORT\_8237\_CH03\_MASK}}
+\index{PORT\_8237\_CH03\_MASK@{PORT\_8237\_CH03\_MASK}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH03\_MASK}{PORT\_8237\_CH03\_MASK}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+MASK~0x000A}
+
+\mbox{\Hypertarget{io_8h_a830bd2bdce2b56d8712f9670575ce88f}\label{io_8h_a830bd2bdce2b56d8712f9670575ce88f}} 
+\index{io.h@{io.h}!PORT\_8237\_CH03\_MODE@{PORT\_8237\_CH03\_MODE}}
+\index{PORT\_8237\_CH03\_MODE@{PORT\_8237\_CH03\_MODE}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH03\_MODE}{PORT\_8237\_CH03\_MODE}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+MODE~0x000B}
+
+\mbox{\Hypertarget{io_8h_a5f80462226713bcf5891ba5179f0dfcd}\label{io_8h_a5f80462226713bcf5891ba5179f0dfcd}} 
+\index{io.h@{io.h}!PORT\_8237\_CH03\_RESET@{PORT\_8237\_CH03\_RESET}}
+\index{PORT\_8237\_CH03\_RESET@{PORT\_8237\_CH03\_RESET}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH03\_RESET}{PORT\_8237\_CH03\_RESET}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+RESET~0x000D}
+
+\mbox{\Hypertarget{io_8h_a652f57e6100e1bb2f7ebc0230c963a14}\label{io_8h_a652f57e6100e1bb2f7ebc0230c963a14}} 
+\index{io.h@{io.h}!PORT\_8237\_CH03\_STATCOM@{PORT\_8237\_CH03\_STATCOM}}
+\index{PORT\_8237\_CH03\_STATCOM@{PORT\_8237\_CH03\_STATCOM}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH03\_STATCOM}{PORT\_8237\_CH03\_STATCOM}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+STATCOM~0x0008}
+
+\mbox{\Hypertarget{io_8h_a93797fec4ce6ad518f64e008de609c43}\label{io_8h_a93797fec4ce6ad518f64e008de609c43}} 
+\index{io.h@{io.h}!PORT\_8237\_CH03\_WRITEMASK@{PORT\_8237\_CH03\_WRITEMASK}}
+\index{PORT\_8237\_CH03\_WRITEMASK@{PORT\_8237\_CH03\_WRITEMASK}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH03\_WRITEMASK}{PORT\_8237\_CH03\_WRITEMASK}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+WRITEMASK~0x000F}
+
+\mbox{\Hypertarget{io_8h_a62d27337f120afef29acb919ca5ed5b8}\label{io_8h_a62d27337f120afef29acb919ca5ed5b8}} 
+\index{io.h@{io.h}!PORT\_8237\_CH03\_WRITEREQ@{PORT\_8237\_CH03\_WRITEREQ}}
+\index{PORT\_8237\_CH03\_WRITEREQ@{PORT\_8237\_CH03\_WRITEREQ}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH03\_WRITEREQ}{PORT\_8237\_CH03\_WRITEREQ}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH03\+\_\+\+WRITEREQ~0x0009}
+
+\mbox{\Hypertarget{io_8h_ab8e5cf871f5e911fd38d1bc6bcc379a7}\label{io_8h_ab8e5cf871f5e911fd38d1bc6bcc379a7}} 
+\index{io.h@{io.h}!PORT\_8237\_CH0\_BASE\_ADDR@{PORT\_8237\_CH0\_BASE\_ADDR}}
+\index{PORT\_8237\_CH0\_BASE\_ADDR@{PORT\_8237\_CH0\_BASE\_ADDR}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH0\_BASE\_ADDR}{PORT\_8237\_CH0\_BASE\_ADDR}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH0\+\_\+\+BASE\+\_\+\+ADDR~0x0000}
+
+\mbox{\Hypertarget{io_8h_adc8ed8c767e1b7415e40430facfa08b3}\label{io_8h_adc8ed8c767e1b7415e40430facfa08b3}} 
+\index{io.h@{io.h}!PORT\_8237\_CH0\_WORD\_COUNT@{PORT\_8237\_CH0\_WORD\_COUNT}}
+\index{PORT\_8237\_CH0\_WORD\_COUNT@{PORT\_8237\_CH0\_WORD\_COUNT}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH0\_WORD\_COUNT}{PORT\_8237\_CH0\_WORD\_COUNT}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH0\+\_\+\+WORD\+\_\+\+COUNT~0x0001}
+
+\mbox{\Hypertarget{io_8h_a478cfab666f90290b9a85da9a6d43238}\label{io_8h_a478cfab666f90290b9a85da9a6d43238}} 
+\index{io.h@{io.h}!PORT\_8237\_CH1\_BASE\_ADDR@{PORT\_8237\_CH1\_BASE\_ADDR}}
+\index{PORT\_8237\_CH1\_BASE\_ADDR@{PORT\_8237\_CH1\_BASE\_ADDR}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH1\_BASE\_ADDR}{PORT\_8237\_CH1\_BASE\_ADDR}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH1\+\_\+\+BASE\+\_\+\+ADDR~0x0002}
+
+\mbox{\Hypertarget{io_8h_a1d3ffb33f2231a9cd9aad61d5b30ca7c}\label{io_8h_a1d3ffb33f2231a9cd9aad61d5b30ca7c}} 
+\index{io.h@{io.h}!PORT\_8237\_CH1\_WORD\_COUNT@{PORT\_8237\_CH1\_WORD\_COUNT}}
+\index{PORT\_8237\_CH1\_WORD\_COUNT@{PORT\_8237\_CH1\_WORD\_COUNT}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH1\_WORD\_COUNT}{PORT\_8237\_CH1\_WORD\_COUNT}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH1\+\_\+\+WORD\+\_\+\+COUNT~0x0003}
+
+\mbox{\Hypertarget{io_8h_a5e297e36d6d93bf448cd76896964cf67}\label{io_8h_a5e297e36d6d93bf448cd76896964cf67}} 
+\index{io.h@{io.h}!PORT\_8237\_CH2\_BASE\_ADDR@{PORT\_8237\_CH2\_BASE\_ADDR}}
+\index{PORT\_8237\_CH2\_BASE\_ADDR@{PORT\_8237\_CH2\_BASE\_ADDR}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH2\_BASE\_ADDR}{PORT\_8237\_CH2\_BASE\_ADDR}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH2\+\_\+\+BASE\+\_\+\+ADDR~0x0004}
+
+\mbox{\Hypertarget{io_8h_a53609b1c354dfeee1b38ede3f80e7700}\label{io_8h_a53609b1c354dfeee1b38ede3f80e7700}} 
+\index{io.h@{io.h}!PORT\_8237\_CH2\_WORD\_COUNT@{PORT\_8237\_CH2\_WORD\_COUNT}}
+\index{PORT\_8237\_CH2\_WORD\_COUNT@{PORT\_8237\_CH2\_WORD\_COUNT}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH2\_WORD\_COUNT}{PORT\_8237\_CH2\_WORD\_COUNT}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH2\+\_\+\+WORD\+\_\+\+COUNT~0x0005}
+
+\mbox{\Hypertarget{io_8h_a32b54b3cb7c9223c7bf6027ae41b7660}\label{io_8h_a32b54b3cb7c9223c7bf6027ae41b7660}} 
+\index{io.h@{io.h}!PORT\_8237\_CH3\_BASE\_ADDR@{PORT\_8237\_CH3\_BASE\_ADDR}}
+\index{PORT\_8237\_CH3\_BASE\_ADDR@{PORT\_8237\_CH3\_BASE\_ADDR}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH3\_BASE\_ADDR}{PORT\_8237\_CH3\_BASE\_ADDR}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH3\+\_\+\+BASE\+\_\+\+ADDR~0x0006}
+
+\mbox{\Hypertarget{io_8h_ae93091003bf86cc3e7a813862a172583}\label{io_8h_ae93091003bf86cc3e7a813862a172583}} 
+\index{io.h@{io.h}!PORT\_8237\_CH3\_WORD\_COUNT@{PORT\_8237\_CH3\_WORD\_COUNT}}
+\index{PORT\_8237\_CH3\_WORD\_COUNT@{PORT\_8237\_CH3\_WORD\_COUNT}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH3\_WORD\_COUNT}{PORT\_8237\_CH3\_WORD\_COUNT}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH3\+\_\+\+WORD\+\_\+\+COUNT~0x0007}
+
+\mbox{\Hypertarget{io_8h_a6a550392b3e82efb5443edcc714d6102}\label{io_8h_a6a550392b3e82efb5443edcc714d6102}} 
+\index{io.h@{io.h}!PORT\_8237\_CH47\_CLRBYTE@{PORT\_8237\_CH47\_CLRBYTE}}
+\index{PORT\_8237\_CH47\_CLRBYTE@{PORT\_8237\_CH47\_CLRBYTE}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH47\_CLRBYTE}{PORT\_8237\_CH47\_CLRBYTE}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+CLRBYTE~0x00\+D8}
+
+\mbox{\Hypertarget{io_8h_afe13411473a1f815ce3eca4e1d5ddd5c}\label{io_8h_afe13411473a1f815ce3eca4e1d5ddd5c}} 
+\index{io.h@{io.h}!PORT\_8237\_CH47\_CLRMASK@{PORT\_8237\_CH47\_CLRMASK}}
+\index{PORT\_8237\_CH47\_CLRMASK@{PORT\_8237\_CH47\_CLRMASK}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH47\_CLRMASK}{PORT\_8237\_CH47\_CLRMASK}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+CLRMASK~0x00\+DC}
+
+\mbox{\Hypertarget{io_8h_af9da8feb4592a8da74f22cb7830eef98}\label{io_8h_af9da8feb4592a8da74f22cb7830eef98}} 
+\index{io.h@{io.h}!PORT\_8237\_CH47\_MASK@{PORT\_8237\_CH47\_MASK}}
+\index{PORT\_8237\_CH47\_MASK@{PORT\_8237\_CH47\_MASK}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH47\_MASK}{PORT\_8237\_CH47\_MASK}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+MASK~0x00\+D4}
+
+\mbox{\Hypertarget{io_8h_a94bc6fbbfa1dd8e8ca116bcaeab8215e}\label{io_8h_a94bc6fbbfa1dd8e8ca116bcaeab8215e}} 
+\index{io.h@{io.h}!PORT\_8237\_CH47\_MODE@{PORT\_8237\_CH47\_MODE}}
+\index{PORT\_8237\_CH47\_MODE@{PORT\_8237\_CH47\_MODE}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH47\_MODE}{PORT\_8237\_CH47\_MODE}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+MODE~0x00\+D6}
+
+\mbox{\Hypertarget{io_8h_a39bc9bf4cbb3e340dc50817e141b3f14}\label{io_8h_a39bc9bf4cbb3e340dc50817e141b3f14}} 
+\index{io.h@{io.h}!PORT\_8237\_CH47\_RESET@{PORT\_8237\_CH47\_RESET}}
+\index{PORT\_8237\_CH47\_RESET@{PORT\_8237\_CH47\_RESET}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH47\_RESET}{PORT\_8237\_CH47\_RESET}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+RESET~0x00\+DA}
+
+\mbox{\Hypertarget{io_8h_af96104ca88767823a060df18592f9a44}\label{io_8h_af96104ca88767823a060df18592f9a44}} 
+\index{io.h@{io.h}!PORT\_8237\_CH47\_STATCOM@{PORT\_8237\_CH47\_STATCOM}}
+\index{PORT\_8237\_CH47\_STATCOM@{PORT\_8237\_CH47\_STATCOM}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH47\_STATCOM}{PORT\_8237\_CH47\_STATCOM}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+STATCOM~0x00\+D0}
+
+\mbox{\Hypertarget{io_8h_a475d33a12151fc31b168889b29d62989}\label{io_8h_a475d33a12151fc31b168889b29d62989}} 
+\index{io.h@{io.h}!PORT\_8237\_CH47\_WRITEMASK@{PORT\_8237\_CH47\_WRITEMASK}}
+\index{PORT\_8237\_CH47\_WRITEMASK@{PORT\_8237\_CH47\_WRITEMASK}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH47\_WRITEMASK}{PORT\_8237\_CH47\_WRITEMASK}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+WRITEMASK~0x00\+DE}
+
+\mbox{\Hypertarget{io_8h_ae26164eb90e2aa49ea603a49b7ca3ace}\label{io_8h_ae26164eb90e2aa49ea603a49b7ca3ace}} 
+\index{io.h@{io.h}!PORT\_8237\_CH47\_WRITEREQ@{PORT\_8237\_CH47\_WRITEREQ}}
+\index{PORT\_8237\_CH47\_WRITEREQ@{PORT\_8237\_CH47\_WRITEREQ}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH47\_WRITEREQ}{PORT\_8237\_CH47\_WRITEREQ}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH47\+\_\+\+WRITEREQ~0x00\+D2}
+
+\mbox{\Hypertarget{io_8h_a4419b7d8ff7b61e63511ec9bb404772f}\label{io_8h_a4419b7d8ff7b61e63511ec9bb404772f}} 
+\index{io.h@{io.h}!PORT\_8237\_CH4\_BASE\_ADDR@{PORT\_8237\_CH4\_BASE\_ADDR}}
+\index{PORT\_8237\_CH4\_BASE\_ADDR@{PORT\_8237\_CH4\_BASE\_ADDR}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH4\_BASE\_ADDR}{PORT\_8237\_CH4\_BASE\_ADDR}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH4\+\_\+\+BASE\+\_\+\+ADDR~0x00\+C0}
+
+\mbox{\Hypertarget{io_8h_a7c5f2fbec595e6ccc5aa70e687d9e9f0}\label{io_8h_a7c5f2fbec595e6ccc5aa70e687d9e9f0}} 
+\index{io.h@{io.h}!PORT\_8237\_CH4\_WORD\_COUNT@{PORT\_8237\_CH4\_WORD\_COUNT}}
+\index{PORT\_8237\_CH4\_WORD\_COUNT@{PORT\_8237\_CH4\_WORD\_COUNT}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH4\_WORD\_COUNT}{PORT\_8237\_CH4\_WORD\_COUNT}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH4\+\_\+\+WORD\+\_\+\+COUNT~0x00\+C2}
+
+\mbox{\Hypertarget{io_8h_a1b7ba9a719503fca0b8439c1d56acb18}\label{io_8h_a1b7ba9a719503fca0b8439c1d56acb18}} 
+\index{io.h@{io.h}!PORT\_8237\_CH5\_BASE\_ADDR@{PORT\_8237\_CH5\_BASE\_ADDR}}
+\index{PORT\_8237\_CH5\_BASE\_ADDR@{PORT\_8237\_CH5\_BASE\_ADDR}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH5\_BASE\_ADDR}{PORT\_8237\_CH5\_BASE\_ADDR}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH5\+\_\+\+BASE\+\_\+\+ADDR~0x00\+C4}
+
+\mbox{\Hypertarget{io_8h_aa3c462d4af3881574e6371d5ab9757b8}\label{io_8h_aa3c462d4af3881574e6371d5ab9757b8}} 
+\index{io.h@{io.h}!PORT\_8237\_CH5\_WORD\_COUNT@{PORT\_8237\_CH5\_WORD\_COUNT}}
+\index{PORT\_8237\_CH5\_WORD\_COUNT@{PORT\_8237\_CH5\_WORD\_COUNT}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH5\_WORD\_COUNT}{PORT\_8237\_CH5\_WORD\_COUNT}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH5\+\_\+\+WORD\+\_\+\+COUNT~0x00\+C6}
+
+\mbox{\Hypertarget{io_8h_ade991d3a7edba9cc11584a9e7eb17cd8}\label{io_8h_ade991d3a7edba9cc11584a9e7eb17cd8}} 
+\index{io.h@{io.h}!PORT\_8237\_CH6\_BASE\_ADDR@{PORT\_8237\_CH6\_BASE\_ADDR}}
+\index{PORT\_8237\_CH6\_BASE\_ADDR@{PORT\_8237\_CH6\_BASE\_ADDR}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH6\_BASE\_ADDR}{PORT\_8237\_CH6\_BASE\_ADDR}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH6\+\_\+\+BASE\+\_\+\+ADDR~0x00\+C8}
+
+\mbox{\Hypertarget{io_8h_afb2889ce5928290b0ae78b24301ad1f7}\label{io_8h_afb2889ce5928290b0ae78b24301ad1f7}} 
+\index{io.h@{io.h}!PORT\_8237\_CH6\_WORD\_COUNT@{PORT\_8237\_CH6\_WORD\_COUNT}}
+\index{PORT\_8237\_CH6\_WORD\_COUNT@{PORT\_8237\_CH6\_WORD\_COUNT}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH6\_WORD\_COUNT}{PORT\_8237\_CH6\_WORD\_COUNT}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH6\+\_\+\+WORD\+\_\+\+COUNT~0x00\+CA}
+
+\mbox{\Hypertarget{io_8h_a80f445febfdca8d0d2a403dc15dd676f}\label{io_8h_a80f445febfdca8d0d2a403dc15dd676f}} 
+\index{io.h@{io.h}!PORT\_8237\_CH7\_BASE\_ADDR@{PORT\_8237\_CH7\_BASE\_ADDR}}
+\index{PORT\_8237\_CH7\_BASE\_ADDR@{PORT\_8237\_CH7\_BASE\_ADDR}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH7\_BASE\_ADDR}{PORT\_8237\_CH7\_BASE\_ADDR}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH7\+\_\+\+BASE\+\_\+\+ADDR~0x00\+CC}
+
+\mbox{\Hypertarget{io_8h_ab1e1087ce383a5b4c09da351763ce155}\label{io_8h_ab1e1087ce383a5b4c09da351763ce155}} 
+\index{io.h@{io.h}!PORT\_8237\_CH7\_WORD\_COUNT@{PORT\_8237\_CH7\_WORD\_COUNT}}
+\index{PORT\_8237\_CH7\_WORD\_COUNT@{PORT\_8237\_CH7\_WORD\_COUNT}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8237\_CH7\_WORD\_COUNT}{PORT\_8237\_CH7\_WORD\_COUNT}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8237\+\_\+\+CH7\+\_\+\+WORD\+\_\+\+COUNT~0x00\+CE}
+
+\mbox{\Hypertarget{io_8h_a7738bd87cc2fa7059296c7ae0a77ca20}\label{io_8h_a7738bd87cc2fa7059296c7ae0a77ca20}} 
+\index{io.h@{io.h}!PORT\_8254\_CH0\_DATA@{PORT\_8254\_CH0\_DATA}}
+\index{PORT\_8254\_CH0\_DATA@{PORT\_8254\_CH0\_DATA}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8254\_CH0\_DATA}{PORT\_8254\_CH0\_DATA}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8254\+\_\+\+CH0\+\_\+\+DATA~0x0040}
+
+\mbox{\Hypertarget{io_8h_a348349d3f7eddcfae07c1dbf063f457d}\label{io_8h_a348349d3f7eddcfae07c1dbf063f457d}} 
+\index{io.h@{io.h}!PORT\_8254\_CH1\_DATA@{PORT\_8254\_CH1\_DATA}}
+\index{PORT\_8254\_CH1\_DATA@{PORT\_8254\_CH1\_DATA}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8254\_CH1\_DATA}{PORT\_8254\_CH1\_DATA}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8254\+\_\+\+CH1\+\_\+\+DATA~0x0041}
+
+\mbox{\Hypertarget{io_8h_aa3afc7a114dd67f0748ab566fc4a0601}\label{io_8h_aa3afc7a114dd67f0748ab566fc4a0601}} 
+\index{io.h@{io.h}!PORT\_8254\_CH2\_DATA@{PORT\_8254\_CH2\_DATA}}
+\index{PORT\_8254\_CH2\_DATA@{PORT\_8254\_CH2\_DATA}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8254\_CH2\_DATA}{PORT\_8254\_CH2\_DATA}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8254\+\_\+\+CH2\+\_\+\+DATA~0x0042}
+
+\mbox{\Hypertarget{io_8h_a5a53c8e4f4c33b7d9e4673009760dee7}\label{io_8h_a5a53c8e4f4c33b7d9e4673009760dee7}} 
+\index{io.h@{io.h}!PORT\_8254\_MODE\_CMD@{PORT\_8254\_MODE\_CMD}}
+\index{PORT\_8254\_MODE\_CMD@{PORT\_8254\_MODE\_CMD}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8254\_MODE\_CMD}{PORT\_8254\_MODE\_CMD}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8254\+\_\+\+MODE\+\_\+\+CMD~0x0043}
+
+\mbox{\Hypertarget{io_8h_a1d10d1e55f25618a3b1aa3d89b6292ca}\label{io_8h_a1d10d1e55f25618a3b1aa3d89b6292ca}} 
+\index{io.h@{io.h}!PORT\_8259\_PRI\_COMMAND@{PORT\_8259\_PRI\_COMMAND}}
+\index{PORT\_8259\_PRI\_COMMAND@{PORT\_8259\_PRI\_COMMAND}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8259\_PRI\_COMMAND}{PORT\_8259\_PRI\_COMMAND}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8259\+\_\+\+PRI\+\_\+\+COMMAND~0x0020}
+
+\mbox{\Hypertarget{io_8h_a186fb228b6c24e899435b234fed85bcb}\label{io_8h_a186fb228b6c24e899435b234fed85bcb}} 
+\index{io.h@{io.h}!PORT\_8259\_PRI\_DATA@{PORT\_8259\_PRI\_DATA}}
+\index{PORT\_8259\_PRI\_DATA@{PORT\_8259\_PRI\_DATA}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8259\_PRI\_DATA}{PORT\_8259\_PRI\_DATA}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8259\+\_\+\+PRI\+\_\+\+DATA~0x0021}
+
+\mbox{\Hypertarget{io_8h_a21951d044773742e048b53e340b36574}\label{io_8h_a21951d044773742e048b53e340b36574}} 
+\index{io.h@{io.h}!PORT\_8259\_SEC\_COMMAND@{PORT\_8259\_SEC\_COMMAND}}
+\index{PORT\_8259\_SEC\_COMMAND@{PORT\_8259\_SEC\_COMMAND}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8259\_SEC\_COMMAND}{PORT\_8259\_SEC\_COMMAND}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8259\+\_\+\+SEC\+\_\+\+COMMAND~0x00\+A0}
+
+\mbox{\Hypertarget{io_8h_ab1827596ecd1a7cf048842e065cf4ad0}\label{io_8h_ab1827596ecd1a7cf048842e065cf4ad0}} 
+\index{io.h@{io.h}!PORT\_8259\_SEC\_DATA@{PORT\_8259\_SEC\_DATA}}
+\index{PORT\_8259\_SEC\_DATA@{PORT\_8259\_SEC\_DATA}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_8259\_SEC\_DATA}{PORT\_8259\_SEC\_DATA}}
+{\footnotesize\ttfamily \#define PORT\+\_\+8259\+\_\+\+SEC\+\_\+\+DATA~0x00\+A1}
+

@@ -10,7 +10,7 @@
 // |                     as the 64-bit versions of descriptor tables.                                                  |
 // | License:            3-Clause ("New") BSD                                                                          |
 // | Created:            November 11, 2023                                                                             |
-// | Last Modified:      November 13, 2023                                                                             |
+// | Last Modified:      November 14, 2023                                                                             |
 // +-------------------------------------------------------------------------------------------------------------------+
 // | Copyright (c) 2023 Elijah Creed Fedele (ecfedele@proton.me)                                                       |
 // | All rights reserved.                                                                                              |
@@ -132,16 +132,24 @@ struct idt_ptr {
     struct idt_entry *table; ///< pointer to IDT (table)
 } __attribute__((packed));
 
+void     _cli    (void);
 void     _cpuid  (struct proc_state *regs, uint32_t leaf);
+uint8_t  _inb    (uint16_t port);
+uint16_t _inw    (uint16_t port);
+uint32_t _ind    (uint16_t port);
 void     _lgdt   (struct gdt_entry *gdt, size_t table_size);
 void     _lidt   (struct idt_entry *idt, size_t table_size);
-void     _sgdt   (struct gdt_ptr *gdtr);
-void     _sidt   (struct idt_ptr *idtr);
+void     _outb   (uint16_t port, uint8_t val);
+void     _outw   (uint16_t port, uint16_t val);
+void     _outd   (uint16_t port, uint32_t val);
 uint64_t _rdmsr  (uint32_t msr);
 uint64_t _rdtsc  (void) __attribute__((naked));
-void     _wrmsr  (uint32_t msr, uint64_t val);
-void     _syscall(struct proc_state *regs);
+void     _sgdt   (struct gdt_ptr *gdtr);
+void     _sidt   (struct idt_ptr *idtr);
+void     _sti    (void);
 void     _swapgs (void) __attribute__((naked));
+void     _syscall(struct proc_state *regs);
+void     _wrmsr  (uint32_t msr, uint64_t val);
 
 #ifdef __cplusplus
 }

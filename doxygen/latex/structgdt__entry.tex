@@ -1,0 +1,119 @@
+\hypertarget{structgdt__entry}{}\doxysection{gdt\+\_\+entry Struct Reference}
+\label{structgdt__entry}\index{gdt\_entry@{gdt\_entry}}
+
+
+{\ttfamily \#include $<$primitives.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structgdt__entry_a0467e904a6915e6e3dcb6d82389faa0c}{limit\+\_\+lower}}
+\begin{DoxyCompactList}\small\item\em lower 16 bits of the segment limit (size) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structgdt__entry_ab64d053eb873792fe5bef6b5dae69f01}{base\+\_\+lower}}
+\begin{DoxyCompactList}\small\item\em lower 16 bits of the segment base \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structgdt__entry_a932b59f1184434d803f046f5a87b9b29}{base\+\_\+inner\+\_\+0}}
+\begin{DoxyCompactList}\small\item\em lower-\/middle 8 bits of the segment base \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structgdt__entry_af8f88469b3301c3e777e97b470a97413}{access}}
+\begin{DoxyCompactList}\small\item\em access settings and GDT segment properties \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structgdt__entry_ad33407f376f9d6c72f874a1f62bea886}{flags\+\_\+limit}}
+\begin{DoxyCompactList}\small\item\em upper nibble provides additional access flags; lower nibble is upper 4 bits of limit \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structgdt__entry_ab58ceca87d8e91da053590f6ea505a47}{base\+\_\+inner\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em upper-\/middle 8 bits of the segment base \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structgdt__entry_a52605b8b523fc921deb943f12f38b83f}{base\+\_\+upper}}
+\begin{DoxyCompactList}\small\item\em upper 32 bits of the segment base \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structgdt__entry_aaa02f06512e2892804f1c876eb2afe3b}{reserved}}
+\begin{DoxyCompactList}\small\item\em reserved field used to pad out GDT entry to 16 bytes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides a definition of a x86-\/64 Global Descriptor Table (GDT) entry. These entries are used to define the behavior of protected memory segments when operating in segmentation-\/based memory models. For x86-\/64, segmentation is entirely deprecated; a minimum of six GDT entries (one null, four for userland/kernel code \& data, and one for the \char`\"{}\+System Segment\char`\"{}) are required for the purpose of properly initializing Long Mode and bypassing legacy limit check hardware, but otherwise are completely unused. The GDT can contain up to 8,192 entries. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{primitives_8h_aef66877bb94112bdc26ac7dc8070bc33}{\+\_\+lgdt}}, \mbox{\hyperlink{primitives_8h_a01d77ec53c1430317b453e4ed13b05bb}{\+\_\+sgdt}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structgdt__entry_af8f88469b3301c3e777e97b470a97413}\label{structgdt__entry_af8f88469b3301c3e777e97b470a97413}} 
+\index{gdt\_entry@{gdt\_entry}!access@{access}}
+\index{access@{access}!gdt\_entry@{gdt\_entry}}
+\doxysubsubsection{\texorpdfstring{access}{access}}
+{\footnotesize\ttfamily uint8\+\_\+t gdt\+\_\+entry\+::access}
+
+
+
+access settings and GDT segment properties 
+
+\mbox{\Hypertarget{structgdt__entry_a932b59f1184434d803f046f5a87b9b29}\label{structgdt__entry_a932b59f1184434d803f046f5a87b9b29}} 
+\index{gdt\_entry@{gdt\_entry}!base\_inner\_0@{base\_inner\_0}}
+\index{base\_inner\_0@{base\_inner\_0}!gdt\_entry@{gdt\_entry}}
+\doxysubsubsection{\texorpdfstring{base\_inner\_0}{base\_inner\_0}}
+{\footnotesize\ttfamily uint8\+\_\+t gdt\+\_\+entry\+::base\+\_\+inner\+\_\+0}
+
+
+
+lower-\/middle 8 bits of the segment base 
+
+\mbox{\Hypertarget{structgdt__entry_ab58ceca87d8e91da053590f6ea505a47}\label{structgdt__entry_ab58ceca87d8e91da053590f6ea505a47}} 
+\index{gdt\_entry@{gdt\_entry}!base\_inner\_1@{base\_inner\_1}}
+\index{base\_inner\_1@{base\_inner\_1}!gdt\_entry@{gdt\_entry}}
+\doxysubsubsection{\texorpdfstring{base\_inner\_1}{base\_inner\_1}}
+{\footnotesize\ttfamily uint8\+\_\+t gdt\+\_\+entry\+::base\+\_\+inner\+\_\+1}
+
+
+
+upper-\/middle 8 bits of the segment base 
+
+\mbox{\Hypertarget{structgdt__entry_ab64d053eb873792fe5bef6b5dae69f01}\label{structgdt__entry_ab64d053eb873792fe5bef6b5dae69f01}} 
+\index{gdt\_entry@{gdt\_entry}!base\_lower@{base\_lower}}
+\index{base\_lower@{base\_lower}!gdt\_entry@{gdt\_entry}}
+\doxysubsubsection{\texorpdfstring{base\_lower}{base\_lower}}
+{\footnotesize\ttfamily uint16\+\_\+t gdt\+\_\+entry\+::base\+\_\+lower}
+
+
+
+lower 16 bits of the segment base 
+
+\mbox{\Hypertarget{structgdt__entry_a52605b8b523fc921deb943f12f38b83f}\label{structgdt__entry_a52605b8b523fc921deb943f12f38b83f}} 
+\index{gdt\_entry@{gdt\_entry}!base\_upper@{base\_upper}}
+\index{base\_upper@{base\_upper}!gdt\_entry@{gdt\_entry}}
+\doxysubsubsection{\texorpdfstring{base\_upper}{base\_upper}}
+{\footnotesize\ttfamily uint32\+\_\+t gdt\+\_\+entry\+::base\+\_\+upper}
+
+
+
+upper 32 bits of the segment base 
+
+\mbox{\Hypertarget{structgdt__entry_ad33407f376f9d6c72f874a1f62bea886}\label{structgdt__entry_ad33407f376f9d6c72f874a1f62bea886}} 
+\index{gdt\_entry@{gdt\_entry}!flags\_limit@{flags\_limit}}
+\index{flags\_limit@{flags\_limit}!gdt\_entry@{gdt\_entry}}
+\doxysubsubsection{\texorpdfstring{flags\_limit}{flags\_limit}}
+{\footnotesize\ttfamily uint8\+\_\+t gdt\+\_\+entry\+::flags\+\_\+limit}
+
+
+
+upper nibble provides additional access flags; lower nibble is upper 4 bits of limit 
+
+\mbox{\Hypertarget{structgdt__entry_a0467e904a6915e6e3dcb6d82389faa0c}\label{structgdt__entry_a0467e904a6915e6e3dcb6d82389faa0c}} 
+\index{gdt\_entry@{gdt\_entry}!limit\_lower@{limit\_lower}}
+\index{limit\_lower@{limit\_lower}!gdt\_entry@{gdt\_entry}}
+\doxysubsubsection{\texorpdfstring{limit\_lower}{limit\_lower}}
+{\footnotesize\ttfamily uint16\+\_\+t gdt\+\_\+entry\+::limit\+\_\+lower}
+
+
+
+lower 16 bits of the segment limit (size) 
+
+\mbox{\Hypertarget{structgdt__entry_aaa02f06512e2892804f1c876eb2afe3b}\label{structgdt__entry_aaa02f06512e2892804f1c876eb2afe3b}} 
+\index{gdt\_entry@{gdt\_entry}!reserved@{reserved}}
+\index{reserved@{reserved}!gdt\_entry@{gdt\_entry}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily uint32\+\_\+t gdt\+\_\+entry\+::reserved}
+
+
+
+reserved field used to pad out GDT entry to 16 bytes 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+kernel/arch/\mbox{\hyperlink{primitives_8h}{primitives.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,51 @@
+\hypertarget{structidt__ptr}{}\doxysection{idt\+\_\+ptr Struct Reference}
+\label{structidt__ptr}\index{idt\_ptr@{idt\_ptr}}
+
+
+{\ttfamily \#include $<$primitives.\+h$>$}
+
+
+
+Collaboration diagram for idt\+\_\+ptr\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structidt__ptr_a76beacc70bde3b6f91e4a97e94474d0d}{size}}
+\begin{DoxyCompactList}\small\item\em size of the table \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structidt__entry}{idt\+\_\+entry}} $\ast$ \mbox{\hyperlink{structidt__ptr_a7428624de2747c7dca482530ba424e03}{table}}
+\begin{DoxyCompactList}\small\item\em pointer to IDT (table) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides a convenient C/\+C++ structure for receiving results from the SIDT (Store Interrupt Descriptor Table Register) instruction. The \mbox{\hyperlink{primitives_8h_a4feeab1f9f03bd87789243f5155adb30}{\+\_\+sidt}} function declared below will adjust the \mbox{\hyperlink{structidt__ptr_a76beacc70bde3b6f91e4a97e94474d0d}{idt\+\_\+ptr\+::size}} field appropriately. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structidt__entry}{idt\+\_\+entry}}, \mbox{\hyperlink{primitives_8h_a4feeab1f9f03bd87789243f5155adb30}{\+\_\+sidt}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structidt__ptr_a76beacc70bde3b6f91e4a97e94474d0d}\label{structidt__ptr_a76beacc70bde3b6f91e4a97e94474d0d}} 
+\index{idt\_ptr@{idt\_ptr}!size@{size}}
+\index{size@{size}!idt\_ptr@{idt\_ptr}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily uint16\+\_\+t idt\+\_\+ptr\+::size}
+
+
+
+size of the table 
+
+\mbox{\Hypertarget{structidt__ptr_a7428624de2747c7dca482530ba424e03}\label{structidt__ptr_a7428624de2747c7dca482530ba424e03}} 
+\index{idt\_ptr@{idt\_ptr}!table@{table}}
+\index{table@{table}!idt\_ptr@{idt\_ptr}}
+\doxysubsubsection{\texorpdfstring{table}{table}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structidt__entry}{idt\+\_\+entry}}$\ast$ idt\+\_\+ptr\+::table}
+
+
+
+pointer to IDT (table) 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+kernel/arch/\mbox{\hyperlink{primitives_8h}{primitives.\+h}}\end{DoxyCompactItemize}
