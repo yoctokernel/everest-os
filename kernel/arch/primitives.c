@@ -9,7 +9,7 @@
 // |                     arch/primitives.h header.                                                                     |
 // | License:            3-Clause ("New") BSD                                                                          |
 // | Created:            November 13, 2023                                                                             |
-// | Last Modified:      November 14, 2023                                                                             |
+// | Last Modified:      November 15, 2023                                                                             |
 // +-------------------------------------------------------------------------------------------------------------------+
 // | Copyright (c) 2023 Elijah Creed Fedele (ecfedele@proton.me)                                                       |
 // | All rights reserved.                                                                                              |

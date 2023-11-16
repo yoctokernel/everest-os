@@ -9,7 +9,7 @@
 // |                     model-specific register (MSR) addresses for use with the RDMSR and WRMSR instructions.        |
 // | License:            3-Clause ("New") BSD                                                                          |
 // | Created:            November 11, 2023                                                                             |
-// | Last Modified:      November 13, 2023                                                                             |
+// | Last Modified:      November 15, 2023                                                                             |
 // +-------------------------------------------------------------------------------------------------------------------+
 // | Copyright (c) 2023 Elijah Creed Fedele (ecfedele@proton.me)                                                       |
 // | All rights reserved.                                                                                              |
