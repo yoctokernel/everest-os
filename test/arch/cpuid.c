@@ -1,15 +1,14 @@
 // +-------------------------------------------------------------------------------------------------------------------+
-// | File:               arch/io.h                                                                                     |
-// | Title:              x86-64 (Intel 64/AMD64) Model-Specific Register (MSR) Address Definitions                     |
-// | Project:            Everest OS (kernel)                                                                           |
+// | File:               test/arch/cpuid.c                                                                             |
+// | Title:              CPUID Function Test Code                                                                      |
+// | Project:            Everest OS (Kernel) Tests                                                                     |
 // | Version:            ---                                                                                           |
 // | Main Author:        Elijah Creed Fedele (ecfedele@proton.me)                                                      |
 // | Other Contributors: see CONTRIBUTORS.md                                                                           |
-// | Description:        This file provides C/C++ preprocessor definitions for standard x86 (IA-32) and x86-64         |
-// |                     I/O ports, which are commonly used by legacy hardware.                                        |
+// | Description:        This file tests the CPUID instruction wrapper provided in <arch/primitives.h>.                |
 // | License:            3-Clause ("New") BSD                                                                          |
-// | Created:            November 14, 2023                                                                             |
-// | Last Modified:      November 15, 2023                                                                             |
+// | Created:            November 16, 2023                                                                             |
+// | Last Modified:      November 16, 2023                                                                             |
 // +-------------------------------------------------------------------------------------------------------------------+
 // | Copyright (c) 2023 Elijah Creed Fedele (ecfedele@proton.me)                                                       |
 // | All rights reserved.                                                                                              |
@@ -33,57 +32,51 @@
 // | USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                                          |
 // +-------------------------------------------------------------------------------------------------------------------+
 
-#ifndef IO_H
-#define IO_H
+#include <stdio.h>
+#include <stdint.h>
+#include <stddef.h>
 
-// 8237 DMA Controller I/O port addresses, channels 0-3
-#define PORT_8237_CH0_BASE_ADDR  0x0000
-#define PORT_8237_CH0_WORD_COUNT 0x0001
-#define PORT_8237_CH1_BASE_ADDR  0x0002
-#define PORT_8237_CH1_WORD_COUNT 0x0003
-#define PORT_8237_CH2_BASE_ADDR  0x0004
-#define PORT_8237_CH2_WORD_COUNT 0x0005
-#define PORT_8237_CH3_BASE_ADDR  0x0006
-#define PORT_8237_CH3_WORD_COUNT 0x0007
-#define PORT_8237_CH03_STATCOM   0x0008
-#define PORT_8237_CH03_WRITEREQ  0x0009
-#define PORT_8237_CH03_MASK      0x000A
-#define PORT_8237_CH03_MODE      0x000B
-#define PORT_8237_CH03_CLRBYTE   0x000C
-#define PORT_8237_CH03_RESET     0x000D
-#define PORT_8237_CH03_CLRMASK   0x000E
-#define PORT_8237_CH03_WRITEMASK 0x000F
+struct proc_state {
+    uint64_t rax;    ///< general purpose A register
+    uint64_t rbx;    ///< general purpose B register
+    uint64_t rcx;    ///< general purpose C register
+    uint64_t rdx;    ///< general purpose D register
+    uint64_t rsi;    ///< the source index register
+    uint64_t rdi;    ///< the destination index register
+    uint64_t rbp;    ///< the frame pointer register
+    uint64_t rsp;    ///< the stack pointer register
+    uint64_t r8;     ///< the R8 (64-bit extension) register
+    uint64_t r9;     ///< the R9 (64-bit extension) register
+    uint64_t r10;    ///< the R10 (64-bit extension) register
+    uint64_t r11;    ///< the R11 (64-bit extension) register
+    uint64_t r12;    ///< the R12 (64-bit extension) register
+    uint64_t r13;    ///< the R13 (64-bit extension) register
+    uint64_t r14;    ///< the R14 (64-bit extension) register
+    uint64_t r15;    ///< the R15 (64-bit extension) register
+    uint64_t rflags; ///< the processor state register 
+};
 
-// Primary 8259 Programmable Interrupt Controller (PIC) I/O port addresses
-#define PORT_8259_PRI_COMMAND    0x0020
-#define PORT_8259_PRI_DATA       0x0021
+void _cpuid(struct proc_state *regs, uint32_t leaf)
+{
+    uint64_t a = 0, b = 0, c = 0, d = 0;
+    asm volatile (
+        "xorq  %%rax, %%rax \n"
+        "movq  %0,    %%rax \n"
+        "cpuid              \n"
+        : "=a" (a), "=b" (b), "=c" (c), "=d" (d)
+        : "r" ((uint64_t) leaf) );
+    regs->rax = a;
+    regs->rbx = b;
+    regs->rcx = c;
+    regs->rdx = d;
+}
 
-// 8253/8254 Programmable Interval Timer (PIT) I/O port addresses
-#define PORT_8254_CH0_DATA       0x0040
-#define PORT_8254_CH1_DATA       0x0041
-#define PORT_8254_CH2_DATA       0x0042
-#define PORT_8254_MODE_CMD       0x0043
-
-// Secondary 8259 Programmable Interrupt Controller (PIC) I/O port addresses
-#define PORT_8259_SEC_COMMAND    0x00A0
-#define PORT_8259_SEC_DATA       0x00A1
-
-// 8237 DMA Controller I/O port addresses, channels 4-7
-#define PORT_8237_CH4_BASE_ADDR  0x00C0
-#define PORT_8237_CH4_WORD_COUNT 0x00C2
-#define PORT_8237_CH5_BASE_ADDR  0x00C4
-#define PORT_8237_CH5_WORD_COUNT 0x00C6
-#define PORT_8237_CH6_BASE_ADDR  0x00C8
-#define PORT_8237_CH6_WORD_COUNT 0x00CA
-#define PORT_8237_CH7_BASE_ADDR  0x00CC
-#define PORT_8237_CH7_WORD_COUNT 0x00CE
-#define PORT_8237_CH47_STATCOM   0x00D0
-#define PORT_8237_CH47_WRITEREQ  0x00D2
-#define PORT_8237_CH47_MASK      0x00D4
-#define PORT_8237_CH47_MODE      0x00D6
-#define PORT_8237_CH47_CLRBYTE   0x00D8
-#define PORT_8237_CH47_RESET     0x00DA
-#define PORT_8237_CH47_CLRMASK   0x00DC
-#define PORT_8237_CH47_WRITEMASK 0x00DE
-
-#endif /* IO_H */
+int main(int argc, char **argv)
+{
+    struct proc_state proc;
+    _cpuid(&proc, 0);
+    printf("EAX = %X, EBX = %X, ECX = %X, EDX = %X\n",
+    (uint32_t) proc.rax, (uint32_t) proc.rbx, (uint32_t) proc.rcx, (uint32_t) proc.rdx
+    );
+    return 0;
+}

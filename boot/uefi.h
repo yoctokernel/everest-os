@@ -1,15 +1,14 @@
 // +-------------------------------------------------------------------------------------------------------------------+
-// | File:               arch/io.h                                                                                     |
-// | Title:              x86-64 (Intel 64/AMD64) Model-Specific Register (MSR) Address Definitions                     |
-// | Project:            Everest OS (kernel)                                                                           |
+// | File:               boot/uefi.h                                                                                   |
+// | Title:              UEFI Bootloader Helper Functions                                                              |
+// | Project:            Everest OS (Bootloader)                                                                       |
 // | Version:            ---                                                                                           |
 // | Main Author:        Elijah Creed Fedele (ecfedele@proton.me)                                                      |
 // | Other Contributors: see CONTRIBUTORS.md                                                                           |
-// | Description:        This file provides C/C++ preprocessor definitions for standard x86 (IA-32) and x86-64         |
-// |                     I/O ports, which are commonly used by legacy hardware.                                        |
+// | Description:        This file provides definitions of various UEFI helper functions for the Everest bootloader.   |
 // | License:            3-Clause ("New") BSD                                                                          |
-// | Created:            November 14, 2023                                                                             |
-// | Last Modified:      November 15, 2023                                                                             |
+// | Created:            November 16, 2023                                                                             |
+// | Last Modified:      November 16, 2023                                                                             |
 // +-------------------------------------------------------------------------------------------------------------------+
 // | Copyright (c) 2023 Elijah Creed Fedele (ecfedele@proton.me)                                                       |
 // | All rights reserved.                                                                                              |
@@ -33,57 +32,37 @@
 // | USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                                          |
 // +-------------------------------------------------------------------------------------------------------------------+
 
-#ifndef IO_H
-#define IO_H
+#ifndef UEFI_H
+#define UEFI_H
 
-// 8237 DMA Controller I/O port addresses, channels 0-3
-#define PORT_8237_CH0_BASE_ADDR  0x0000
-#define PORT_8237_CH0_WORD_COUNT 0x0001
-#define PORT_8237_CH1_BASE_ADDR  0x0002
-#define PORT_8237_CH1_WORD_COUNT 0x0003
-#define PORT_8237_CH2_BASE_ADDR  0x0004
-#define PORT_8237_CH2_WORD_COUNT 0x0005
-#define PORT_8237_CH3_BASE_ADDR  0x0006
-#define PORT_8237_CH3_WORD_COUNT 0x0007
-#define PORT_8237_CH03_STATCOM   0x0008
-#define PORT_8237_CH03_WRITEREQ  0x0009
-#define PORT_8237_CH03_MASK      0x000A
-#define PORT_8237_CH03_MODE      0x000B
-#define PORT_8237_CH03_CLRBYTE   0x000C
-#define PORT_8237_CH03_RESET     0x000D
-#define PORT_8237_CH03_CLRMASK   0x000E
-#define PORT_8237_CH03_WRITEMASK 0x000F
+#include <stdarg.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <efi.h>
+#include <efilib.h>
 
-// Primary 8259 Programmable Interrupt Controller (PIC) I/O port addresses
-#define PORT_8259_PRI_COMMAND    0x0020
-#define PORT_8259_PRI_DATA       0x0021
+#define EFI_ACPI_TABLE_GUID    {0x8868E871,0xE4F1,0x11D3,{0xBC,0x22,0x00,0x80,0xC7,0x3C,0x88,0x81}}
+#define ACPI_TABLE_GUID        {0xEB9D2D30,0x2D88,0x11D3,{0x9A,0x16,0x00,0x90,0x27,0x3F,0xC1,0x4D}}
+#define ACPI_10_TABLE_GUID     ACPI_TABLE_GUID
+#define EFI_ACPI_20_TABLE_GUID EFI_ACPI_TABLE_GUID
 
-// 8253/8254 Programmable Interval Timer (PIT) I/O port addresses
-#define PORT_8254_CH0_DATA       0x0040
-#define PORT_8254_CH1_DATA       0x0041
-#define PORT_8254_CH2_DATA       0x0042
-#define PORT_8254_MODE_CMD       0x0043
+static EFI_STATUS               _Status;
+static EFI_HANDLE               _Image;
+static EFI_SYSTEM_TABLE        *_SystemTable;
+static EFI_BOOT_SERVICES       *_BootServices;
+static EFI_CONFIGURATION_TABLE *_ConfigTable;
 
-// Secondary 8259 Programmable Interrupt Controller (PIC) I/O port addresses
-#define PORT_8259_SEC_COMMAND    0x00A0
-#define PORT_8259_SEC_DATA       0x00A1
+void    init   (EFI_HANDLE handle, EFI_SYSTEM_TABLE *table);
+void   *malloc (size_t size);
+void   *calloc (size_t count, size_t size);
+void    free   (void *ptr);
+void   *memcpy (void *restrict dest, const void *restrict src, size_t count);
+void   *memfill(void *restrict dest, uint8_t rep, size_t count);
+int     strchr (const char *str, const char chr, size_t index);
+size_t  strcnt (const char *str, const char chr);
+size_t  strlen (const char *str);
+size_t  printf (const char *fmt, ...);
+void    exit   ();
 
-// 8237 DMA Controller I/O port addresses, channels 4-7
-#define PORT_8237_CH4_BASE_ADDR  0x00C0
-#define PORT_8237_CH4_WORD_COUNT 0x00C2
-#define PORT_8237_CH5_BASE_ADDR  0x00C4
-#define PORT_8237_CH5_WORD_COUNT 0x00C6
-#define PORT_8237_CH6_BASE_ADDR  0x00C8
-#define PORT_8237_CH6_WORD_COUNT 0x00CA
-#define PORT_8237_CH7_BASE_ADDR  0x00CC
-#define PORT_8237_CH7_WORD_COUNT 0x00CE
-#define PORT_8237_CH47_STATCOM   0x00D0
-#define PORT_8237_CH47_WRITEREQ  0x00D2
-#define PORT_8237_CH47_MASK      0x00D4
-#define PORT_8237_CH47_MODE      0x00D6
-#define PORT_8237_CH47_CLRBYTE   0x00D8
-#define PORT_8237_CH47_RESET     0x00DA
-#define PORT_8237_CH47_CLRMASK   0x00DC
-#define PORT_8237_CH47_WRITEMASK 0x00DE
-
-#endif /* IO_H */
+#endif /* UEFI_H */
