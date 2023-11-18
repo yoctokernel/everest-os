@@ -1,14 +1,15 @@
 // +-------------------------------------------------------------------------------------------------------------------+
-// | File:               boot/uefi.h                                                                                   |
-// | Title:              UEFI Bootloader Helper Functions                                                              |
+// | File:               boot/env.c                                                                                    |
+// | Title:              UEFI Bootloader Helper Functions (Environment Components)                                     |
 // | Project:            Everest OS (Bootloader)                                                                       |
 // | Version:            ---                                                                                           |
 // | Main Author:        Elijah Creed Fedele (ecfedele@proton.me)                                                      |
 // | Other Contributors: see CONTRIBUTORS.md                                                                           |
-// | Description:        This file provides definitions of various UEFI helper functions for the Everest bootloader.   |
+// | Description:        This file provides implementations of UEFI helper functions related to configuring the boot   |
+// |                     services environment.                                                                         |
 // | License:            3-Clause ("New") BSD                                                                          |
-// | Created:            November 16, 2023                                                                             |
-// | Last Modified:      November 18, 2023                                                                             |
+// | Created:            November 17, 2023                                                                             |
+// | Last Modified:      November 17, 2023                                                                             |
 // +-------------------------------------------------------------------------------------------------------------------+
 // | Copyright (c) 2023 Elijah Creed Fedele (ecfedele@proton.me)                                                       |
 // | All rights reserved.                                                                                              |
@@ -32,39 +33,24 @@
 // | USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                                          |
 // +-------------------------------------------------------------------------------------------------------------------+
 
-#ifndef UEFI_H
-#define UEFI_H
+#include "uefi.h"
 
-#include <stdarg.h>
-#include <stddef.h>
-#include <stdint.h>
-#include <stdbool.h>
-#include <efi.h>
-#include <efilib.h>
+/// @fn    init(EFI_HANDLE handle, EFI_SYSTEM_TABLE *table)
+/// @param handle 
+/// @param table 
+void init(EFI_HANDLE handle, EFI_SYSTEM_TABLE *table)
+{
+    IH = handle;
+    ST = table;
+    BS = ST->BootServices;
+    CT = ST->ConfigurationTable;
+}
 
-#define EFI_ACPI_TABLE_GUID    {0x8868E871,0xE4F1,0x11D3,{0xBC,0x22,0x00,0x80,0xC7,0x3C,0x88,0x81}}
-#define ACPI_TABLE_GUID        {0xEB9D2D30,0x2D88,0x11D3,{0x9A,0x16,0x00,0x90,0x27,0x3F,0xC1,0x4D}}
-#define ACPI_10_TABLE_GUID     ACPI_TABLE_GUID
-#define EFI_ACPI_20_TABLE_GUID EFI_ACPI_TABLE_GUID
-
-static EFI_STATUS               _status;
-static EFI_HANDLE               IH;
-static EFI_SYSTEM_TABLE        *ST;
-static EFI_BOOT_SERVICES       *BS;
-static EFI_CONFIGURATION_TABLE *CT;
-static UINTN                    MapKey;
-
-void    init   (EFI_HANDLE handle, EFI_SYSTEM_TABLE *table);
-void   *malloc (size_t size);
-void   *calloc (size_t count, size_t size);
-void    free   (void *ptr);
-void   *memcpy (void *restrict dest, const void *restrict src, size_t count);
-void   *memfill(void *restrict dest, uint8_t rep, size_t count);
-size_t  memset (void *restrict buf, size_t length, uint8_t value);
-int     strchr (const char *str, const char chr, size_t index);
-size_t  strcnt (const char *str, const char chr);
-size_t  strlen (const char *str);
-size_t  printf (const char *fmt, ...);
-void    exit   (void);
-
-#endif /* UEFI_H */
+/// @fn    exit(void)
+/// Calls the <c>ExitBootServices(EFI_HANDLE ImageHandle, UINTN MapKey)</c> function used to terminate EFI boot services
+/// and hand control to the operating system. Note that this function <b>must</b> be called with a valid <c>MapKey</c> 
+/// reference to a constructed memory map.
+void exit(void)
+{
+    _status = BS->ExitBootServices(IH, MapKey);
+}
