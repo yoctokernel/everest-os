@@ -1,0 +1,48 @@
+\hypertarget{cpuid_8c}{}\doxysection{test/arch/cpuid.c File Reference}
+\label{cpuid_8c}\index{test/arch/cpuid.c@{test/arch/cpuid.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for cpuid.\+c\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structproc__state}{proc\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{cpuid_8c_ad9b15889d2f56638808ea71ce96ecfc7}{\+\_\+cpuid}} (struct \mbox{\hyperlink{structproc__state}{proc\+\_\+state}} $\ast$regs, uint32\+\_\+t leaf)
+\item 
+int \mbox{\hyperlink{cpuid_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cpuid_8c_ad9b15889d2f56638808ea71ce96ecfc7}\label{cpuid_8c_ad9b15889d2f56638808ea71ce96ecfc7}} 
+\index{cpuid.c@{cpuid.c}!\_cpuid@{\_cpuid}}
+\index{\_cpuid@{\_cpuid}!cpuid.c@{cpuid.c}}
+\doxysubsubsection{\texorpdfstring{\_cpuid()}{\_cpuid()}}
+{\footnotesize\ttfamily void \+\_\+cpuid (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structproc__state}{proc\+\_\+state}} $\ast$}]{regs,  }\item[{uint32\+\_\+t}]{leaf }\end{DoxyParamCaption})}
+
+Executes the {\ttfamily CPUID} processor-\/identification instruction with the {\ttfamily leaf} argument placed in {\ttfamily EAX}. The {\ttfamily CPUID} instruction is used for determination of processor capabilities and features. Depending on the specific argument placed in {\ttfamily EAX} prior to execution, the {\ttfamily CPUID} instruction will return various elements of information. These can range from vendor identification strings ({\ttfamily EAX = 00h}) to complex bitwise-\/encoded flags about instruction sets and processor caching capabilities. Intel has published an entire 128-\/page application note on this subject; for more information, see Intel Corporation (2012) AP-\/485.
+
+There are obscure ways to test for the presence of the {\ttfamily CPUID} instruction prior to executing it, a practice which should always be performed when potentially executing an instruction for which hardware support is not explicitly known at runtime. However, all modern x86 CPUs support this instruction, and the few that do not (early model 486s and earlier) are too historical to be supported by most operating systems and the presence of {\ttfamily CPUID} can safely be assumed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em regs} & a pointer to an instance of a processor state struct to store the output of {\ttfamily CPUID}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em leaf} & the argument supplied to the {\ttfamily CPUID} instruction \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+struct \mbox{\hyperlink{structproc__state}{proc\+\_\+state}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{cpuid_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{cpuid_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{cpuid.c@{cpuid.c}!main@{main}}
+\index{main@{main}!cpuid.c@{cpuid.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+

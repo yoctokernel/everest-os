@@ -100,9 +100,9 @@ size_t memset(void *restrict buf, size_t length, uint8_t value)
 /// This function is used to allocate and zero a memory region for use with data structures. Similar to the C standard
 /// library implementation of this function, this function accepts two arguments: a <c>count</c> or <c>nmemb</c> 
 /// parameter which specifies the number of members of space to allocate, followed by a <c>size</c> parameter indicating
-/// the size of each member in bytes. Similarly to @ref *malloc(size_t), this function returns a <c>NULL</c> pointer if
+/// the size of each member in bytes. Similarly to @ref malloc(), this function returns a <c>NULL</c> pointer if
 /// the allocation fails for any reason.
-/// @see    *malloc(size_t), memset(void *restrict, size_t, uint8_t)
+/// @see    malloc(), memset()
 /// @param  count the number of members to allocate
 /// @param  size  the size of each member in bytes
 /// @return       a pointer to the allocated and zeroed memory buffer
@@ -122,7 +122,7 @@ void *calloc(size_t count, size_t size)
 /// @fn    free(void *)
 /// Frees a memory allocation provided by <c>malloc()</c> or <c>calloc()</c>. Sets the library-static <c>EFI_STATUS</c>
 /// with the state of the deallocation process.
-/// @see   *malloc(size_t), *calloc(size_t, size_t)
+/// @see   malloc(), calloc()
 /// @param ptr 
 void free(void *ptr)
 {

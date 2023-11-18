@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['flags_5flimit_24',['flags_limit',['../structgdt__entry.html#ad33407f376f9d6c72f874a1f62bea886',1,'gdt_entry::flags_limit()'],['../primitives_8h.html#a943fae3122db5f2a6eedd86d0c124219',1,'flags_limit():&#160;primitives.h']]]
+  ['calloc_26',['calloc',['../malloc_8c.html#ada17db70c1293b5de54f9fb1aabd5e45',1,'calloc(size_t count, size_t size):&#160;malloc.c'],['../uefi_8h.html#add8a2c74f2c5f5e3db163234988f61d6',1,'calloc(size_t count, size_t size):&#160;malloc.c']]],
+  ['cpuid_2ec_27',['cpuid.c',['../cpuid_8c.html',1,'']]]
 ];

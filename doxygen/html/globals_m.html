@@ -65,6 +65,23 @@ $(function() {
 <div class="textblock">Here is a list of all file members with links to the files they belong to:</div>
 
 <h3><a id="index_m"></a>- m -</h3><ul>
+<li>main()
+: <a class="el" href="cpuid_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">cpuid.c</a>
+</li>
+<li>malloc()
+: <a class="el" href="malloc_8c.html#a41a55f77c79e9f4122257e4177b6af0f">malloc.c</a>
+, <a class="el" href="uefi_8h.html#a7ac38fce3243a7dcf448301ee9ffd392">uefi.h</a>
+</li>
+<li>memcpy()
+: <a class="el" href="uefi_8h.html#af0f04eaea46a7092d26cdb0232c87381">uefi.h</a>
+</li>
+<li>memfill()
+: <a class="el" href="uefi_8h.html#a7aa30b35a2545ebe6287efa3b2d2a17a">uefi.h</a>
+</li>
+<li>memset()
+: <a class="el" href="malloc_8c.html#a4216be6d4c97e21a59874c607c8d9621">malloc.c</a>
+, <a class="el" href="uefi_8h.html#a4216be6d4c97e21a59874c607c8d9621">uefi.h</a>
+</li>
 <li>MSR_IA32_APERF
 : <a class="el" href="msrs_8h.html#adf9301a753a554f44762c15b9622b2fc">msrs.h</a>
 </li>
@@ -125,74 +142,338 @@ $(function() {
 <li>MSR_IA32_LER_TO_IP
 : <a class="el" href="msrs_8h.html#a9513ebaa294223b4572e81529454d46f">msrs.h</a>
 </li>
+<li>MSR_IA32_MC0_ADDR
+: <a class="el" href="msrs_8h.html#aadff6693ab6c19b661e675a7e1aca316">msrs.h</a>
+</li>
+<li>MSR_IA32_MC0_CTL
+: <a class="el" href="msrs_8h.html#a2745673ef3507e49978f4f059aff1bb5">msrs.h</a>
+</li>
 <li>MSR_IA32_MC0_CTL2
 : <a class="el" href="msrs_8h.html#a9dffdecdc148cf9730db5f6ee532c278">msrs.h</a>
+</li>
+<li>MSR_IA32_MC0_MISC
+: <a class="el" href="msrs_8h.html#a952dccc238abe252a6e2cb91ee88e0e2">msrs.h</a>
+</li>
+<li>MSR_IA32_MC0_STATUS
+: <a class="el" href="msrs_8h.html#a114cba2e58a081a03f7ee7cd42b1b2f5">msrs.h</a>
+</li>
+<li>MSR_IA32_MC10_ADDR
+: <a class="el" href="msrs_8h.html#ae2ead67859a8dee138ff0a78c20e8d59">msrs.h</a>
+</li>
+<li>MSR_IA32_MC10_CTL
+: <a class="el" href="msrs_8h.html#a116a7a0deff8ca13a9bf227bd59bb029">msrs.h</a>
 </li>
 <li>MSR_IA32_MC10_CTL2
 : <a class="el" href="msrs_8h.html#a3568c0879dec95be8429ef4be39602c6">msrs.h</a>
 </li>
+<li>MSR_IA32_MC10_MISC
+: <a class="el" href="msrs_8h.html#a5935c274c37b32843711939c80342889">msrs.h</a>
+</li>
+<li>MSR_IA32_MC10_STATUS
+: <a class="el" href="msrs_8h.html#a5063d946b60eaf39da5a06f0e7c50fd2">msrs.h</a>
+</li>
+<li>MSR_IA32_MC11_ADDR
+: <a class="el" href="msrs_8h.html#acc11552aa58368cde02a818be7b9dc5c">msrs.h</a>
+</li>
+<li>MSR_IA32_MC11_CTL
+: <a class="el" href="msrs_8h.html#a3ae4a44e982c5308ff4a143267b3e803">msrs.h</a>
+</li>
 <li>MSR_IA32_MC11_CTL2
 : <a class="el" href="msrs_8h.html#ac4b115255b234e687295667996b4cd7a">msrs.h</a>
+</li>
+<li>MSR_IA32_MC11_MISC
+: <a class="el" href="msrs_8h.html#a1f15bcc0b0107269696c1fa0539d2ef1">msrs.h</a>
+</li>
+<li>MSR_IA32_MC11_STATUS
+: <a class="el" href="msrs_8h.html#ad75198ef4de9d7b72f793fbc41621e0d">msrs.h</a>
+</li>
+<li>MSR_IA32_MC12_ADDR
+: <a class="el" href="msrs_8h.html#a3e3b3aa02bf4b2b809be0dc29f77da3a">msrs.h</a>
+</li>
+<li>MSR_IA32_MC12_CTL
+: <a class="el" href="msrs_8h.html#aaa56fc6d740c4673df9dc8775ce82df1">msrs.h</a>
 </li>
 <li>MSR_IA32_MC12_CTL2
 : <a class="el" href="msrs_8h.html#a44be4109dc53fd499dd6c8768fe27510">msrs.h</a>
 </li>
+<li>MSR_IA32_MC12_MISC
+: <a class="el" href="msrs_8h.html#a7cf13973813e55f5c252f619cccc6a29">msrs.h</a>
+</li>
+<li>MSR_IA32_MC12_STATUS
+: <a class="el" href="msrs_8h.html#a7127348a6a62dabbadb02fb2ace7c04e">msrs.h</a>
+</li>
+<li>MSR_IA32_MC13_ADDR
+: <a class="el" href="msrs_8h.html#a83eb86dd18969404d191db3a85131966">msrs.h</a>
+</li>
+<li>MSR_IA32_MC13_CTL
+: <a class="el" href="msrs_8h.html#a8633a0919aadbc15dced7abd02aa98fc">msrs.h</a>
+</li>
 <li>MSR_IA32_MC13_CTL2
 : <a class="el" href="msrs_8h.html#a70a10a3abddaaed7b37ee6f4bc806e18">msrs.h</a>
+</li>
+<li>MSR_IA32_MC13_MISC
+: <a class="el" href="msrs_8h.html#a965661e3ddaaad74085d227b5fc9e754">msrs.h</a>
+</li>
+<li>MSR_IA32_MC13_STATUS
+: <a class="el" href="msrs_8h.html#afa82377d091d6fc8735a8045f2b7b61b">msrs.h</a>
+</li>
+<li>MSR_IA32_MC14_ADDR
+: <a class="el" href="msrs_8h.html#a537743965bade3f082a6f74347f2be37">msrs.h</a>
+</li>
+<li>MSR_IA32_MC14_CTL
+: <a class="el" href="msrs_8h.html#ad5547b06ccc1d4bfaf590c7fc9fa2db3">msrs.h</a>
 </li>
 <li>MSR_IA32_MC14_CTL2
 : <a class="el" href="msrs_8h.html#a22aece25a2dad9b8020a31e5f50801cd">msrs.h</a>
 </li>
+<li>MSR_IA32_MC14_MISC
+: <a class="el" href="msrs_8h.html#aeaca0db90a9c976c8b164dd5cec9e070">msrs.h</a>
+</li>
+<li>MSR_IA32_MC14_STATUS
+: <a class="el" href="msrs_8h.html#a2f4a6e253951615c36c7ea15f49851a9">msrs.h</a>
+</li>
+<li>MSR_IA32_MC15_ADDR
+: <a class="el" href="msrs_8h.html#a2a89612ce5b0b51bf4984e923c734d99">msrs.h</a>
+</li>
+<li>MSR_IA32_MC15_CTL
+: <a class="el" href="msrs_8h.html#acc876144e2c61850a308f0cc61a7059d">msrs.h</a>
+</li>
 <li>MSR_IA32_MC15_CTL2
 : <a class="el" href="msrs_8h.html#a2a81f0d06c723576dd07dccd649b7575">msrs.h</a>
+</li>
+<li>MSR_IA32_MC15_MISC
+: <a class="el" href="msrs_8h.html#aa229ef2dce6ed4e86049ad4deb41b156">msrs.h</a>
+</li>
+<li>MSR_IA32_MC15_STATUS
+: <a class="el" href="msrs_8h.html#a010ff1ac4aea95983f564a3f2276fbc9">msrs.h</a>
+</li>
+<li>MSR_IA32_MC16_ADDR
+: <a class="el" href="msrs_8h.html#a68b03eb34d61a723388529da733af853">msrs.h</a>
+</li>
+<li>MSR_IA32_MC16_CTL
+: <a class="el" href="msrs_8h.html#a42d1e3dc5c5a330b12b6007129ee86fe">msrs.h</a>
 </li>
 <li>MSR_IA32_MC16_CTL2
 : <a class="el" href="msrs_8h.html#a7347b00b89e1bafb433ec21f25b8e6dc">msrs.h</a>
 </li>
+<li>MSR_IA32_MC16_MISC
+: <a class="el" href="msrs_8h.html#acfc3241f4b260893207188da14517c57">msrs.h</a>
+</li>
+<li>MSR_IA32_MC16_STATUS
+: <a class="el" href="msrs_8h.html#a697fc56b18fdd12f5446f5f7a9d668b1">msrs.h</a>
+</li>
+<li>MSR_IA32_MC17_ADDR
+: <a class="el" href="msrs_8h.html#add47306c11a011cb442210e036e2dcb9">msrs.h</a>
+</li>
+<li>MSR_IA32_MC17_CTL
+: <a class="el" href="msrs_8h.html#a4a139079d8ef2b6485e6549f02e3086e">msrs.h</a>
+</li>
 <li>MSR_IA32_MC17_CTL2
 : <a class="el" href="msrs_8h.html#a92df65b91b00783b086fec14b8e065cb">msrs.h</a>
+</li>
+<li>MSR_IA32_MC17_MISC
+: <a class="el" href="msrs_8h.html#a955d2024e752c559db48e620b4319f5d">msrs.h</a>
+</li>
+<li>MSR_IA32_MC17_STATUS
+: <a class="el" href="msrs_8h.html#a5fdea006935bfc165baab65903b7b1cc">msrs.h</a>
+</li>
+<li>MSR_IA32_MC18_ADDR
+: <a class="el" href="msrs_8h.html#a21e8f005e209d0badb24e33746a0edd4">msrs.h</a>
+</li>
+<li>MSR_IA32_MC18_CTL
+: <a class="el" href="msrs_8h.html#aa420a4d97fd6d0b891e014b5a7b6a047">msrs.h</a>
 </li>
 <li>MSR_IA32_MC18_CTL2
 : <a class="el" href="msrs_8h.html#a0e7eb771c0c23059a1d12cb858ccbd8d">msrs.h</a>
 </li>
+<li>MSR_IA32_MC18_MISC
+: <a class="el" href="msrs_8h.html#af54fcadb57603af68c6b1e787bedda08">msrs.h</a>
+</li>
+<li>MSR_IA32_MC18_STATUS
+: <a class="el" href="msrs_8h.html#a6b57267ce375df41bbf32a42b141b972">msrs.h</a>
+</li>
+<li>MSR_IA32_MC19_ADDR
+: <a class="el" href="msrs_8h.html#a046420755d19b1b69061b19c51c48d17">msrs.h</a>
+</li>
+<li>MSR_IA32_MC19_CTL
+: <a class="el" href="msrs_8h.html#a8f0c36ed9c48cd91e62d3aaf96bf5400">msrs.h</a>
+</li>
 <li>MSR_IA32_MC19_CTL2
 : <a class="el" href="msrs_8h.html#af065be11933d88a0979c852c0e877ed2">msrs.h</a>
+</li>
+<li>MSR_IA32_MC19_MISC
+: <a class="el" href="msrs_8h.html#a82a743e229a7a8f6f55bb4502115be6b">msrs.h</a>
+</li>
+<li>MSR_IA32_MC19_STATUS
+: <a class="el" href="msrs_8h.html#a082bc49a3b9c3c063b0b44a2d5185c1d">msrs.h</a>
+</li>
+<li>MSR_IA32_MC1_ADDR
+: <a class="el" href="msrs_8h.html#aab3b2b446e57511ec1172d21e4992467">msrs.h</a>
+</li>
+<li>MSR_IA32_MC1_CTL
+: <a class="el" href="msrs_8h.html#aaf0d89dadd14e74d1059ad04b03c640f">msrs.h</a>
 </li>
 <li>MSR_IA32_MC1_CTL2
 : <a class="el" href="msrs_8h.html#a01ca1d99c7e9e7b28a5044f6293e37bd">msrs.h</a>
 </li>
+<li>MSR_IA32_MC1_MISC
+: <a class="el" href="msrs_8h.html#abaeafa8e6f36d8f6dd54179fb10f2fe4">msrs.h</a>
+</li>
+<li>MSR_IA32_MC1_STATUS
+: <a class="el" href="msrs_8h.html#aa03b7c954e0bbbc3e7c8391ea0b37218">msrs.h</a>
+</li>
+<li>MSR_IA32_MC20_ADDR
+: <a class="el" href="msrs_8h.html#ab11ebb743388c25540d0a27f89dc0c19">msrs.h</a>
+</li>
+<li>MSR_IA32_MC20_CTL
+: <a class="el" href="msrs_8h.html#aefd98bb843ed196ab2f8c9fedc328a61">msrs.h</a>
+</li>
 <li>MSR_IA32_MC20_CTL2
 : <a class="el" href="msrs_8h.html#aafb378bee2007de5ed7c081073fa83bd">msrs.h</a>
+</li>
+<li>MSR_IA32_MC20_MISC
+: <a class="el" href="msrs_8h.html#a8ef833ebfcd22bbcea86da3b2633b01c">msrs.h</a>
+</li>
+<li>MSR_IA32_MC20_STATUS
+: <a class="el" href="msrs_8h.html#a8e3aafe7c92a526f86d32b46025e1826">msrs.h</a>
+</li>
+<li>MSR_IA32_MC21_ADDR
+: <a class="el" href="msrs_8h.html#ab55dc0475acb240ac2d60942af0b8897">msrs.h</a>
+</li>
+<li>MSR_IA32_MC21_CTL
+: <a class="el" href="msrs_8h.html#aca50101f0822d78f7ca00cece60f183c">msrs.h</a>
 </li>
 <li>MSR_IA32_MC21_CTL2
 : <a class="el" href="msrs_8h.html#a1291058808bccd3ab70d66d6c1948453">msrs.h</a>
 </li>
+<li>MSR_IA32_MC21_MISC
+: <a class="el" href="msrs_8h.html#a83bc85f20ca92a5ac7fba91dd6fc2195">msrs.h</a>
+</li>
+<li>MSR_IA32_MC21_STATUS
+: <a class="el" href="msrs_8h.html#a961ead00527df51363ab785fa931a6e8">msrs.h</a>
+</li>
+<li>MSR_IA32_MC22_ADDR
+: <a class="el" href="msrs_8h.html#a48b30282e290e2a64dbde9eb98288b6c">msrs.h</a>
+</li>
+<li>MSR_IA32_MC22_CTL
+: <a class="el" href="msrs_8h.html#aff40b9fa56e2e9d40189222d247ca8cf">msrs.h</a>
+</li>
 <li>MSR_IA32_MC22_CTL2
 : <a class="el" href="msrs_8h.html#ac9df2504e8e3c8c57c102a6da508eb20">msrs.h</a>
+</li>
+<li>MSR_IA32_MC22_MISC
+: <a class="el" href="msrs_8h.html#a8b1a1ea0aa2006473d704a98b2775f8e">msrs.h</a>
+</li>
+<li>MSR_IA32_MC22_STATUS
+: <a class="el" href="msrs_8h.html#adddad445dd288ce05672dd193dbf8e93">msrs.h</a>
+</li>
+<li>MSR_IA32_MC23_ADDR
+: <a class="el" href="msrs_8h.html#a947ede3a55e2e76b599e444752193a21">msrs.h</a>
+</li>
+<li>MSR_IA32_MC23_CTL
+: <a class="el" href="msrs_8h.html#ac0c99d73022f81ab523b3dcf8b5f5c66">msrs.h</a>
 </li>
 <li>MSR_IA32_MC23_CTL2
 : <a class="el" href="msrs_8h.html#ab70f204d00a0c7f20fbc546a75792131">msrs.h</a>
 </li>
+<li>MSR_IA32_MC23_MISC
+: <a class="el" href="msrs_8h.html#a7241c8e621aa4ab800a8450e68acf35a">msrs.h</a>
+</li>
+<li>MSR_IA32_MC23_STATUS
+: <a class="el" href="msrs_8h.html#a1ac6eddcef95db5483eda250e18b3dca">msrs.h</a>
+</li>
+<li>MSR_IA32_MC24_ADDR
+: <a class="el" href="msrs_8h.html#a1b0646ded1b61574760755e7bebf2437">msrs.h</a>
+</li>
+<li>MSR_IA32_MC24_CTL
+: <a class="el" href="msrs_8h.html#a9304deb000cc78d19507ac0f84de2077">msrs.h</a>
+</li>
 <li>MSR_IA32_MC24_CTL2
 : <a class="el" href="msrs_8h.html#a8bc7f8e7de74c04b02d6dd5039ec66e6">msrs.h</a>
+</li>
+<li>MSR_IA32_MC24_MISC
+: <a class="el" href="msrs_8h.html#aedb78757be03e6c8d075904dee47aaef">msrs.h</a>
+</li>
+<li>MSR_IA32_MC24_STATUS
+: <a class="el" href="msrs_8h.html#a37415707a2a83c6fd7b503fb68c3ed97">msrs.h</a>
+</li>
+<li>MSR_IA32_MC25_ADDR
+: <a class="el" href="msrs_8h.html#ae7fa1013cc340ac62baa3cd5b89c1528">msrs.h</a>
+</li>
+<li>MSR_IA32_MC25_CTL
+: <a class="el" href="msrs_8h.html#ab999fa415373ffc2b7d03e99f50fdaee">msrs.h</a>
 </li>
 <li>MSR_IA32_MC25_CTL2
 : <a class="el" href="msrs_8h.html#af0422a706331128910355514e51f6125">msrs.h</a>
 </li>
+<li>MSR_IA32_MC25_MISC
+: <a class="el" href="msrs_8h.html#aa024beb13f0ed1aba2817181c2345329">msrs.h</a>
+</li>
+<li>MSR_IA32_MC25_STATUS
+: <a class="el" href="msrs_8h.html#a060ee1be26f29cb61b3d5130367e04b3">msrs.h</a>
+</li>
+<li>MSR_IA32_MC26_ADDR
+: <a class="el" href="msrs_8h.html#a2047a22f06b6f58d109e16a4ca359409">msrs.h</a>
+</li>
+<li>MSR_IA32_MC26_CTL
+: <a class="el" href="msrs_8h.html#aa05eaa7297e42dae73080b37ace35852">msrs.h</a>
+</li>
 <li>MSR_IA32_MC26_CTL2
 : <a class="el" href="msrs_8h.html#a34593fec70bff3d89b753305b4c1a737">msrs.h</a>
+</li>
+<li>MSR_IA32_MC26_MISC
+: <a class="el" href="msrs_8h.html#a75e89da4957427154caaa811ef096bff">msrs.h</a>
+</li>
+<li>MSR_IA32_MC26_STATUS
+: <a class="el" href="msrs_8h.html#a9173da6bf570285538f2cbc2e10ce37b">msrs.h</a>
+</li>
+<li>MSR_IA32_MC27_ADDR
+: <a class="el" href="msrs_8h.html#ae4f985083de3369f5c1d2dad9d68a59d">msrs.h</a>
+</li>
+<li>MSR_IA32_MC27_CTL
+: <a class="el" href="msrs_8h.html#af12fa85fbada903999f079a22a3daa7b">msrs.h</a>
 </li>
 <li>MSR_IA32_MC27_CTL2
 : <a class="el" href="msrs_8h.html#a37a9b540163c0347f00b3dfb0f95881a">msrs.h</a>
 </li>
+<li>MSR_IA32_MC27_MISC
+: <a class="el" href="msrs_8h.html#abf62337e7912e3692bfd08c65c106e3f">msrs.h</a>
+</li>
+<li>MSR_IA32_MC27_STATUS
+: <a class="el" href="msrs_8h.html#a33c918736145f8e4294b6c183c187023">msrs.h</a>
+</li>
+<li>MSR_IA32_MC28_ADDR
+: <a class="el" href="msrs_8h.html#acfdcc14a4b5cf1b1eac5a9e83a330598">msrs.h</a>
+</li>
+<li>MSR_IA32_MC28_CTL
+: <a class="el" href="msrs_8h.html#af859b324f05d6166ba7de72ae931fd4e">msrs.h</a>
+</li>
 <li>MSR_IA32_MC28_CTL2
 : <a class="el" href="msrs_8h.html#a742f8d994457b7d436c265073c8e05e2">msrs.h</a>
+</li>
+<li>MSR_IA32_MC28_MISC
+: <a class="el" href="msrs_8h.html#aa25e64e57c8ef574a661330cf48f599d">msrs.h</a>
+</li>
+<li>MSR_IA32_MC28_STATUS
+: <a class="el" href="msrs_8h.html#a91c6850f9430742c5165dfa1dbba6336">msrs.h</a>
 </li>
 <li>MSR_IA32_MC29_CTL2
 : <a class="el" href="msrs_8h.html#a2f27beeb82a07b3476e8e95790ca09ef">msrs.h</a>
 </li>
+<li>MSR_IA32_MC2_ADDR
+: <a class="el" href="msrs_8h.html#a6cab43f6a090335fcdc6736be22a6fec">msrs.h</a>
+</li>
+<li>MSR_IA32_MC2_CTL
+: <a class="el" href="msrs_8h.html#a49c08a64343b4a9bc8569d1d8a859880">msrs.h</a>
+</li>
 <li>MSR_IA32_MC2_CTL2
 : <a class="el" href="msrs_8h.html#ac9b3d5ba78a85be8e9d14b4ae36b47a9">msrs.h</a>
+</li>
+<li>MSR_IA32_MC2_MISC
+: <a class="el" href="msrs_8h.html#a41c045a938b01348d575133f86f0f1ae">msrs.h</a>
+</li>
+<li>MSR_IA32_MC2_STATUS
+: <a class="el" href="msrs_8h.html#a14ada59ef0ed849dac80ea8c0e34fa98">msrs.h</a>
 </li>
 <li>MSR_IA32_MC30_CTL2
 : <a class="el" href="msrs_8h.html#aaf2b8f83b4c36298cd679c662ba7d1a2">msrs.h</a>
@@ -200,26 +481,110 @@ $(function() {
 <li>MSR_IA32_MC31_CTL2
 : <a class="el" href="msrs_8h.html#a2429c2d5f598a06624e5c07c23e5eb91">msrs.h</a>
 </li>
+<li>MSR_IA32_MC3_ADDR
+: <a class="el" href="msrs_8h.html#aa36c6db146e95e1c0f5817f015019152">msrs.h</a>
+</li>
+<li>MSR_IA32_MC3_CTL
+: <a class="el" href="msrs_8h.html#a89b17f34c965cf5069dd8a4b1c7fe238">msrs.h</a>
+</li>
 <li>MSR_IA32_MC3_CTL2
 : <a class="el" href="msrs_8h.html#a6830560f5d0b5ab37203cf4f1195e3ad">msrs.h</a>
+</li>
+<li>MSR_IA32_MC3_MISC
+: <a class="el" href="msrs_8h.html#ae682b9fc10db17ca2e49b567220703ba">msrs.h</a>
+</li>
+<li>MSR_IA32_MC3_STATUS
+: <a class="el" href="msrs_8h.html#a352af0c744334e4f4649ce791c260c88">msrs.h</a>
+</li>
+<li>MSR_IA32_MC4_ADDR
+: <a class="el" href="msrs_8h.html#a92ec8c3ad561541b44c18e58501cca78">msrs.h</a>
+</li>
+<li>MSR_IA32_MC4_CTL
+: <a class="el" href="msrs_8h.html#aa21337eb47852295c82718fc6ef6983a">msrs.h</a>
 </li>
 <li>MSR_IA32_MC4_CTL2
 : <a class="el" href="msrs_8h.html#a9593f749e803a5be340789884c887bd7">msrs.h</a>
 </li>
+<li>MSR_IA32_MC4_MISC
+: <a class="el" href="msrs_8h.html#a9306745adcd61582ed151249f13ffd62">msrs.h</a>
+</li>
+<li>MSR_IA32_MC4_STATUS
+: <a class="el" href="msrs_8h.html#a8ffe36a5205a783775bbdfdccd682cd3">msrs.h</a>
+</li>
+<li>MSR_IA32_MC5_ADDR
+: <a class="el" href="msrs_8h.html#a7ed9b54fa4a800ea0344891ad81be1c3">msrs.h</a>
+</li>
+<li>MSR_IA32_MC5_CTL
+: <a class="el" href="msrs_8h.html#a370f4d42d702f236f5de454e386808a4">msrs.h</a>
+</li>
 <li>MSR_IA32_MC5_CTL2
 : <a class="el" href="msrs_8h.html#a5b07f2325fc34b1eaa2ab56a576032f8">msrs.h</a>
+</li>
+<li>MSR_IA32_MC5_MISC
+: <a class="el" href="msrs_8h.html#a8347ec830b4dcab878125485b4b38a5f">msrs.h</a>
+</li>
+<li>MSR_IA32_MC5_STATUS
+: <a class="el" href="msrs_8h.html#a8b0b29d4e3c5a1851c8b6013c446fffd">msrs.h</a>
+</li>
+<li>MSR_IA32_MC6_ADDR
+: <a class="el" href="msrs_8h.html#ae6d3db28ba0943edfc2dd5b08cffd229">msrs.h</a>
+</li>
+<li>MSR_IA32_MC6_CTL
+: <a class="el" href="msrs_8h.html#a2a2cf1f2b36929d6332fd8852525d8c0">msrs.h</a>
 </li>
 <li>MSR_IA32_MC6_CTL2
 : <a class="el" href="msrs_8h.html#a6b27517e8078f51811e5e291f5d95a95">msrs.h</a>
 </li>
+<li>MSR_IA32_MC6_MISC
+: <a class="el" href="msrs_8h.html#a5606aef6a12454e2bf0a5a5107078f8b">msrs.h</a>
+</li>
+<li>MSR_IA32_MC6_STATUS
+: <a class="el" href="msrs_8h.html#a6330367d9b3f4f0acf732230f7511c8f">msrs.h</a>
+</li>
+<li>MSR_IA32_MC7_ADDR
+: <a class="el" href="msrs_8h.html#a7de87f46952e7d95da7b41923eb3ffa4">msrs.h</a>
+</li>
+<li>MSR_IA32_MC7_CTL
+: <a class="el" href="msrs_8h.html#a0419f78e7ad14cb59ecce3005b8ef1de">msrs.h</a>
+</li>
 <li>MSR_IA32_MC7_CTL2
 : <a class="el" href="msrs_8h.html#ac9245cd6057888d976cf09422d6e4cd0">msrs.h</a>
+</li>
+<li>MSR_IA32_MC7_MISC
+: <a class="el" href="msrs_8h.html#a41ac65196fdaa06a4343ceabfef53759">msrs.h</a>
+</li>
+<li>MSR_IA32_MC7_STATUS
+: <a class="el" href="msrs_8h.html#a9e33c9da9a6e67cffd9def442d772b8a">msrs.h</a>
+</li>
+<li>MSR_IA32_MC8_ADDR
+: <a class="el" href="msrs_8h.html#acda8ccd883d6420fbda47cb8ce6bbd2c">msrs.h</a>
+</li>
+<li>MSR_IA32_MC8_CTL
+: <a class="el" href="msrs_8h.html#a8037fe9e5d74d2321ade1128c01efe46">msrs.h</a>
 </li>
 <li>MSR_IA32_MC8_CTL2
 : <a class="el" href="msrs_8h.html#a7caa3a1e3b910b213690e674e7aa85aa">msrs.h</a>
 </li>
+<li>MSR_IA32_MC8_MISC
+: <a class="el" href="msrs_8h.html#a48bbf33f5ddfda67b469f6649b86909c">msrs.h</a>
+</li>
+<li>MSR_IA32_MC8_STATUS
+: <a class="el" href="msrs_8h.html#ab55b33c9ef4b32d6b62645681e4663e7">msrs.h</a>
+</li>
+<li>MSR_IA32_MC9_ADDR
+: <a class="el" href="msrs_8h.html#a9ab8b53ffc2804b2f0c1b1dcff8efd66">msrs.h</a>
+</li>
+<li>MSR_IA32_MC9_CTL
+: <a class="el" href="msrs_8h.html#a0c07f69b407fa471d5265b4bb30c136f">msrs.h</a>
+</li>
 <li>MSR_IA32_MC9_CTL2
 : <a class="el" href="msrs_8h.html#a192ea868306666bbba337e1a6cf106d2">msrs.h</a>
+</li>
+<li>MSR_IA32_MC9_MISC
+: <a class="el" href="msrs_8h.html#a8e7cfebdd9b5e6561509ea826a64e816">msrs.h</a>
+</li>
+<li>MSR_IA32_MC9_STATUS
+: <a class="el" href="msrs_8h.html#a8501bb3f0b543b53ba94104a8b60582b">msrs.h</a>
 </li>
 <li>MSR_IA32_MCG_CAP
 : <a class="el" href="msrs_8h.html#a258bd2609ae1786db238c1d45ee424bd">msrs.h</a>
@@ -362,11 +727,29 @@ $(function() {
 <li>MSR_IA32_PAT
 : <a class="el" href="msrs_8h.html#a47af1a8e8f63ade2cd569e0606d51877">msrs.h</a>
 </li>
+<li>MSR_IA32_PEBS_ENABLE
+: <a class="el" href="msrs_8h.html#ad2e45441b022a1fa7bd166014b2b4152">msrs.h</a>
+</li>
 <li>MSR_IA32_PERF_CAPABILITIES
 : <a class="el" href="msrs_8h.html#ace01356a368a7d176b0990a594780277">msrs.h</a>
 </li>
 <li>MSR_IA32_PERF_CTL
 : <a class="el" href="msrs_8h.html#a7f27655043477aa336280a9060f78109">msrs.h</a>
+</li>
+<li>MSR_IA32_PERF_GLOBAL_CTRL
+: <a class="el" href="msrs_8h.html#a1d5222727473856c67bac8d533ce698c">msrs.h</a>
+</li>
+<li>MSR_IA32_PERF_GLOBAL_INUSE
+: <a class="el" href="msrs_8h.html#a37efc809e3a78f9f5ce583184994bd4c">msrs.h</a>
+</li>
+<li>MSR_IA32_PERF_GLOBAL_STATUS
+: <a class="el" href="msrs_8h.html#a48cff3eb9327767e14b0fe8589ddd051">msrs.h</a>
+</li>
+<li>MSR_IA32_PERF_GLOBAL_STATUS_SET
+: <a class="el" href="msrs_8h.html#af39e76039e5f899ea6df4441f70bf113">msrs.h</a>
+</li>
+<li>MSR_IA32_PERF_OVF_CTRL
+: <a class="el" href="msrs_8h.html#adf5ffd4897705373a7a2c8c635fb781d">msrs.h</a>
 </li>
 <li>MSR_IA32_PERF_STATUS
 : <a class="el" href="msrs_8h.html#afa364b9bc12f75f7a161eb3790dfe60d">msrs.h</a>
@@ -490,6 +873,45 @@ $(function() {
 </li>
 <li>MSR_IA32_UMWAIT_CONTROL
 : <a class="el" href="msrs_8h.html#a9b48beb1e92ba724019f73d9159ee11f">msrs.h</a>
+</li>
+<li>MSR_IA32_VMX_BASIC
+: <a class="el" href="msrs_8h.html#a74dfe38ca3c30ba14870261a66be8033">msrs.h</a>
+</li>
+<li>MSR_IA32_VMX_CR0_FIXED0
+: <a class="el" href="msrs_8h.html#a58dc8e25cce4d85c050a21a05e9dfa7c">msrs.h</a>
+</li>
+<li>MSR_IA32_VMX_CR0_FIXED1
+: <a class="el" href="msrs_8h.html#ab96a3278a1015eacc98ea83ec0ff1426">msrs.h</a>
+</li>
+<li>MSR_IA32_VMX_CR4_FIXED0
+: <a class="el" href="msrs_8h.html#a8bf1b6615fe5e7f946258cc1765463ee">msrs.h</a>
+</li>
+<li>MSR_IA32_VMX_CR4_FIXED1
+: <a class="el" href="msrs_8h.html#adef8035fb30e780bbcfda31953b82be8">msrs.h</a>
+</li>
+<li>MSR_IA32_VMX_ENTRY_CTLS
+: <a class="el" href="msrs_8h.html#a218bcf50a51d8ffb1fc76cda0d183069">msrs.h</a>
+</li>
+<li>MSR_IA32_VMX_EPT_VPID_CAP
+: <a class="el" href="msrs_8h.html#a2fa074e61666f5f869cffb65a8952c2e">msrs.h</a>
+</li>
+<li>MSR_IA32_VMX_EXIT_CTLS
+: <a class="el" href="msrs_8h.html#a77fbae86e7d2122539d870424e3e3478">msrs.h</a>
+</li>
+<li>MSR_IA32_VMX_MISC
+: <a class="el" href="msrs_8h.html#adee4e031af9a092d4ced8c6ca340ff19">msrs.h</a>
+</li>
+<li>MSR_IA32_VMX_PINBASED_CTLS
+: <a class="el" href="msrs_8h.html#a18b77cec4e58e8740849b399a5e2c49f">msrs.h</a>
+</li>
+<li>MSR_IA32_VMX_PROCBASED_CTLS
+: <a class="el" href="msrs_8h.html#a56a7dd2fb8f9c9cbf8b677510f5e28f1">msrs.h</a>
+</li>
+<li>MSR_IA32_VMX_PROCBASED_CTLS2
+: <a class="el" href="msrs_8h.html#a75722192369bdb75e44817211ecfacc8">msrs.h</a>
+</li>
+<li>MSR_IA32_VMX_VMCS_ENUM
+: <a class="el" href="msrs_8h.html#a81e660aa84e424680912f2492e76d8fd">msrs.h</a>
 </li>
 <li>MSR_IA32_XAPIC_DISABLE_STATUS
 : <a class="el" href="msrs_8h.html#ad92c90c180609ef3d4c425bcb952ea51">msrs.h</a>

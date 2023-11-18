@@ -1,0 +1,35 @@
+\hypertarget{env_8c}{}\doxysection{boot/env.c File Reference}
+\label{env_8c}\index{boot/env.c@{boot/env.c}}
+{\ttfamily \#include \char`\"{}uefi.\+h\char`\"{}}\newline
+Include dependency graph for env.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{env_8c_a7095cd0f46c3d8c109cb3a7888921e1a}{init}} (EFI\+\_\+\+HANDLE handle, EFI\+\_\+\+SYSTEM\+\_\+\+TABLE $\ast$\mbox{\hyperlink{primitives_8h_a09962475e46f649dfa55f5a7d5a67277}{table}})
+\item 
+void \mbox{\hyperlink{env_8c_a323fe52b42775fed38c24ceff67a78f8}{exit}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{env_8c_a323fe52b42775fed38c24ceff67a78f8}\label{env_8c_a323fe52b42775fed38c24ceff67a78f8}} 
+\index{env.c@{env.c}!exit@{exit}}
+\index{exit@{exit}!env.c@{env.c}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily exit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Calls the {\ttfamily Exit\+Boot\+Services(\+EFI\+\_\+\+HANDLE Image\+Handle, UINTN Map\+Key)} function used to terminate EFI boot services and hand control to the operating system. Note that this function {\bfseries{must}} be called with a valid {\ttfamily Map\+Key} reference to a constructed memory map. \mbox{\Hypertarget{env_8c_a7095cd0f46c3d8c109cb3a7888921e1a}\label{env_8c_a7095cd0f46c3d8c109cb3a7888921e1a}} 
+\index{env.c@{env.c}!init@{init}}
+\index{init@{init}!env.c@{env.c}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily init (\begin{DoxyParamCaption}\item[{EFI\+\_\+\+HANDLE}]{handle,  }\item[{EFI\+\_\+\+SYSTEM\+\_\+\+TABLE $\ast$}]{table }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \\
+\hline
+{\em table} & ~\newline
+ \\
+\hline
+\end{DoxyParams}

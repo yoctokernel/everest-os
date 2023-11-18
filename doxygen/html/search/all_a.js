@@ -1,22 +1,6 @@
 var searchData=
 [
-  ['r10_231',['r10',['../structproc__state.html#afe74a744c768d736ec9d47bcd18852aa',1,'proc_state']]],
-  ['r11_232',['r11',['../structproc__state.html#a7d505c5f6d409e8f4e5537282c087004',1,'proc_state']]],
-  ['r12_233',['r12',['../structproc__state.html#ab753f302850710b0518f50b1bcb8ad23',1,'proc_state']]],
-  ['r13_234',['r13',['../structproc__state.html#aabcbb4ba1158b8b3857a19aac57da3fe',1,'proc_state']]],
-  ['r14_235',['r14',['../structproc__state.html#a930262109bd23574f1bd3fa83eff58d9',1,'proc_state']]],
-  ['r15_236',['r15',['../structproc__state.html#aaa3bcd08daaf524d7f29d912aa17073f',1,'proc_state']]],
-  ['r8_237',['r8',['../structproc__state.html#a1ba1eddb5990a747581a7c3418afb096',1,'proc_state']]],
-  ['r9_238',['r9',['../structproc__state.html#a2073a6d44e0631195901a173cb5f0269',1,'proc_state']]],
-  ['rax_239',['rax',['../structproc__state.html#add0d9b6613acc48dedd1be6b839473da',1,'proc_state']]],
-  ['rbp_240',['rbp',['../structproc__state.html#af7cb490524a1608e1e69a9ae7cedab22',1,'proc_state']]],
-  ['rbx_241',['rbx',['../structproc__state.html#ae78db3678ca1247881bca216cec89ae7',1,'proc_state']]],
-  ['rcx_242',['rcx',['../structproc__state.html#abad98d89e06012464049a2ae65cdd41b',1,'proc_state']]],
-  ['rdi_243',['rdi',['../structproc__state.html#a6c0aae472106ceb24357e0837ea2ddfa',1,'proc_state']]],
-  ['rdx_244',['rdx',['../structproc__state.html#a8efdf1b87f79db41d3b28daf89be57f2',1,'proc_state']]],
-  ['readme_2emd_245',['README.md',['../README_8md.html',1,'']]],
-  ['reserved_246',['reserved',['../structgdt__entry.html#aaa02f06512e2892804f1c876eb2afe3b',1,'gdt_entry::reserved()'],['../structidt__entry.html#a9655f9cd2b4f5f259843a374c7e88333',1,'idt_entry::reserved()'],['../primitives_8h.html#aa43c4c21b173ada1b6b7568956f0d650',1,'reserved():&#160;primitives.h']]],
-  ['rflags_247',['rflags',['../structproc__state.html#ab985824caf022e6fed0d60a42c848fd3',1,'proc_state']]],
-  ['rsi_248',['rsi',['../structproc__state.html#ac39a27a144f267eac29aec98b442ec95',1,'proc_state']]],
-  ['rsp_249',['rsp',['../structproc__state.html#aa475f252c5f868d1f7c1892434f24bdc',1,'proc_state']]]
+  ['offset_5finner_338',['offset_inner',['../structidt__entry.html#a47f833c2f299254a3add8b38f10facb5',1,'idt_entry::offset_inner()'],['../primitives_8h.html#ac5d98b39aa9ee794bf81880de1fd9bc0',1,'offset_inner():&#160;primitives.h']]],
+  ['offset_5flower_339',['offset_lower',['../structidt__entry.html#ad7ed2e347d2abf70a46cd653f1a0903e',1,'idt_entry::offset_lower()'],['../primitives_8h.html#a8ea071f11f020022cd44c3de8cb49068',1,'offset_lower():&#160;primitives.h']]],
+  ['offset_5fupper_340',['offset_upper',['../structidt__entry.html#a5b616969186f70ca120817c7c1f3f309',1,'idt_entry::offset_upper()'],['../primitives_8h.html#a2ee51332803d7d0ece7960cad626682f',1,'offset_upper():&#160;primitives.h']]]
 ];

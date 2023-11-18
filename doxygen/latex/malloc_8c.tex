@@ -1,0 +1,73 @@
+\hypertarget{malloc_8c}{}\doxysection{boot/malloc.c File Reference}
+\label{malloc_8c}\index{boot/malloc.c@{boot/malloc.c}}
+{\ttfamily \#include \char`\"{}uefi.\+h\char`\"{}}\newline
+Include dependency graph for malloc.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{malloc_8c_a41a55f77c79e9f4122257e4177b6af0f}{malloc}} (size\+\_\+t \mbox{\hyperlink{primitives_8h_aaba88b24a21a6c70c895c0d55f4a69a0}{size}})
+\item 
+size\+\_\+t \mbox{\hyperlink{malloc_8c_a4216be6d4c97e21a59874c607c8d9621}{memset}} (void $\ast$restrict buf, size\+\_\+t length, uint8\+\_\+t value)
+\item 
+void $\ast$ \mbox{\hyperlink{malloc_8c_ada17db70c1293b5de54f9fb1aabd5e45}{calloc}} (size\+\_\+t count, size\+\_\+t \mbox{\hyperlink{primitives_8h_aaba88b24a21a6c70c895c0d55f4a69a0}{size}})
+\item 
+void \mbox{\hyperlink{malloc_8c_a168d7ed7abe2be17d0d4b6abd2518c31}{free}} (void $\ast$ptr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{malloc_8c_ada17db70c1293b5de54f9fb1aabd5e45}\label{malloc_8c_ada17db70c1293b5de54f9fb1aabd5e45}} 
+\index{malloc.c@{malloc.c}!calloc@{calloc}}
+\index{calloc@{calloc}!malloc.c@{malloc.c}}
+\doxysubsubsection{\texorpdfstring{calloc()}{calloc()}}
+{\footnotesize\ttfamily $\ast$ calloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{count,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+This function is used to allocate and zero a memory region for use with data structures. Similar to the C standard library implementation of this function, this function accepts two arguments\+: a {\ttfamily count} or {\ttfamily nmemb} parameter which specifies the number of members of space to allocate, followed by a {\ttfamily size} parameter indicating the size of each member in bytes. Similarly to \mbox{\hyperlink{malloc_8c_a41a55f77c79e9f4122257e4177b6af0f}{malloc()}}, this function returns a {\ttfamily NULL} pointer if the allocation fails for any reason. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{malloc_8c_a41a55f77c79e9f4122257e4177b6af0f}{malloc()}}, \mbox{\hyperlink{malloc_8c_a4216be6d4c97e21a59874c607c8d9621}{memset()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em count} & the number of members to allocate \\
+\hline
+{\em size} & the size of each member in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the allocated and zeroed memory buffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{malloc_8c_a168d7ed7abe2be17d0d4b6abd2518c31}\label{malloc_8c_a168d7ed7abe2be17d0d4b6abd2518c31}} 
+\index{malloc.c@{malloc.c}!free@{free}}
+\index{free@{free}!malloc.c@{malloc.c}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily free (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+Frees a memory allocation provided by {\ttfamily \mbox{\hyperlink{malloc_8c_a41a55f77c79e9f4122257e4177b6af0f}{malloc()}}} or {\ttfamily \mbox{\hyperlink{malloc_8c_ada17db70c1293b5de54f9fb1aabd5e45}{calloc()}}}. Sets the library-\/static {\ttfamily EFI\+\_\+\+STATUS} with the state of the deallocation process. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{malloc_8c_a41a55f77c79e9f4122257e4177b6af0f}{malloc()}}, \mbox{\hyperlink{malloc_8c_ada17db70c1293b5de54f9fb1aabd5e45}{calloc()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{malloc_8c_a41a55f77c79e9f4122257e4177b6af0f}\label{malloc_8c_a41a55f77c79e9f4122257e4177b6af0f}} 
+\index{malloc.c@{malloc.c}!malloc@{malloc}}
+\index{malloc@{malloc}!malloc.c@{malloc.c}}
+\doxysubsubsection{\texorpdfstring{malloc()}{malloc()}}
+{\footnotesize\ttfamily $\ast$ malloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+This function wraps the EFI native {\ttfamily Boot\+Services-\/$>$Allocate\+Pool()} function to provide a more user-\/friendly memory allocation interface. This function allocates {\ttfamily size} bytes of memory under the UEFI {\ttfamily Efi\+Loader\+Data} class. Similar to the C standard library versions of {\ttfamily $\ast$malloc()}, this function returns {\ttfamily NULL} if, for any reason, the memory allocation request fails. 
+\begin{DoxyParams}{Parameters}
+{\em size} & the number of bytes of memory to allocate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the allocated memory block 
+\end{DoxyReturn}
+\mbox{\Hypertarget{malloc_8c_a4216be6d4c97e21a59874c607c8d9621}\label{malloc_8c_a4216be6d4c97e21a59874c607c8d9621}} 
+\index{malloc.c@{malloc.c}!memset@{memset}}
+\index{memset@{memset}!malloc.c@{malloc.c}}
+\doxysubsubsection{\texorpdfstring{memset()}{memset()}}
+{\footnotesize\ttfamily size\+\_\+t memset (\begin{DoxyParamCaption}\item[{void $\ast$restrict}]{buf,  }\item[{size\+\_\+t}]{length,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+

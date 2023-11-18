@@ -1,5 +1,22 @@
 var searchData=
 [
-  ['table_252',['table',['../structidt__ptr.html#a7428624de2747c7dca482530ba424e03',1,'idt_ptr::table()'],['../primitives_8h.html#a09962475e46f649dfa55f5a7d5a67277',1,'table():&#160;primitives.h']]],
-  ['the_20_3cem_3eeverest_3c_2fem_3e_20operating_20system_253',['The &lt;em&gt;Everest&lt;/em&gt; Operating System',['../md_README.html',1,'']]]
+  ['r10_385',['r10',['../structproc__state.html#afe74a744c768d736ec9d47bcd18852aa',1,'proc_state']]],
+  ['r11_386',['r11',['../structproc__state.html#a7d505c5f6d409e8f4e5537282c087004',1,'proc_state']]],
+  ['r12_387',['r12',['../structproc__state.html#ab753f302850710b0518f50b1bcb8ad23',1,'proc_state']]],
+  ['r13_388',['r13',['../structproc__state.html#aabcbb4ba1158b8b3857a19aac57da3fe',1,'proc_state']]],
+  ['r14_389',['r14',['../structproc__state.html#a930262109bd23574f1bd3fa83eff58d9',1,'proc_state']]],
+  ['r15_390',['r15',['../structproc__state.html#aaa3bcd08daaf524d7f29d912aa17073f',1,'proc_state']]],
+  ['r8_391',['r8',['../structproc__state.html#a1ba1eddb5990a747581a7c3418afb096',1,'proc_state']]],
+  ['r9_392',['r9',['../structproc__state.html#a2073a6d44e0631195901a173cb5f0269',1,'proc_state']]],
+  ['rax_393',['rax',['../structproc__state.html#add0d9b6613acc48dedd1be6b839473da',1,'proc_state']]],
+  ['rbp_394',['rbp',['../structproc__state.html#af7cb490524a1608e1e69a9ae7cedab22',1,'proc_state']]],
+  ['rbx_395',['rbx',['../structproc__state.html#ae78db3678ca1247881bca216cec89ae7',1,'proc_state']]],
+  ['rcx_396',['rcx',['../structproc__state.html#abad98d89e06012464049a2ae65cdd41b',1,'proc_state']]],
+  ['rdi_397',['rdi',['../structproc__state.html#a6c0aae472106ceb24357e0837ea2ddfa',1,'proc_state']]],
+  ['rdx_398',['rdx',['../structproc__state.html#a8efdf1b87f79db41d3b28daf89be57f2',1,'proc_state']]],
+  ['readme_2emd_399',['README.md',['../README_8md.html',1,'']]],
+  ['reserved_400',['reserved',['../structgdt__entry.html#aaa02f06512e2892804f1c876eb2afe3b',1,'gdt_entry::reserved()'],['../structidt__entry.html#a9655f9cd2b4f5f259843a374c7e88333',1,'idt_entry::reserved()'],['../primitives_8h.html#aa43c4c21b173ada1b6b7568956f0d650',1,'reserved():&#160;primitives.h']]],
+  ['rflags_401',['rflags',['../structproc__state.html#ab985824caf022e6fed0d60a42c848fd3',1,'proc_state']]],
+  ['rsi_402',['rsi',['../structproc__state.html#ac39a27a144f267eac29aec98b442ec95',1,'proc_state']]],
+  ['rsp_403',['rsp',['../structproc__state.html#aa475f252c5f868d1f7c1892434f24bdc',1,'proc_state']]]
 ];

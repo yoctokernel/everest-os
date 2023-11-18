@@ -1,0 +1,190 @@
+\hypertarget{uefi_8h}{}\doxysection{boot/uefi.h File Reference}
+\label{uefi_8h}\index{boot/uefi.h@{boot/uefi.h}}
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$efi.\+h$>$}\newline
+{\ttfamily \#include $<$efilib.\+h$>$}\newline
+Include dependency graph for uefi.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{uefi_8h_a9563147a6dd5e2316a9ca3ab8f9c3282}{EFI\+\_\+\+ACPI\+\_\+\+TABLE\+\_\+\+GUID}}~\{0x8868\+E871,0x\+E4\+F1,0x11\+D3,\{0x\+BC,0x22,0x00,0x80,0x\+C7,0x3C,0x88,0x81\}\}
+\item 
+\#define \mbox{\hyperlink{uefi_8h_a50a528da5aa77cd9b6fd6d630b19aa6b}{ACPI\+\_\+\+TABLE\+\_\+\+GUID}}~\{0x\+EB9\+D2\+D30,0x2\+D88,0x11\+D3,\{0x9A,0x16,0x00,0x90,0x27,0x3F,0x\+C1,0x4D\}\}
+\item 
+\#define \mbox{\hyperlink{uefi_8h_aed73b80e97643a64958aae9e2d7e7740}{ACPI\+\_\+10\+\_\+\+TABLE\+\_\+\+GUID}}~\mbox{\hyperlink{uefi_8h_a50a528da5aa77cd9b6fd6d630b19aa6b}{ACPI\+\_\+\+TABLE\+\_\+\+GUID}}
+\item 
+\#define \mbox{\hyperlink{uefi_8h_ac2fea1641e55c1e7b878d2b508a9f0d3}{EFI\+\_\+\+ACPI\+\_\+20\+\_\+\+TABLE\+\_\+\+GUID}}~\mbox{\hyperlink{uefi_8h_a9563147a6dd5e2316a9ca3ab8f9c3282}{EFI\+\_\+\+ACPI\+\_\+\+TABLE\+\_\+\+GUID}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{uefi_8h_a9c5e3fbb0911e3e696d1fdc7b014ffc4}{init}} (EFI\+\_\+\+HANDLE handle, EFI\+\_\+\+SYSTEM\+\_\+\+TABLE $\ast$\mbox{\hyperlink{primitives_8h_a09962475e46f649dfa55f5a7d5a67277}{table}})
+\item 
+void $\ast$ \mbox{\hyperlink{uefi_8h_a7ac38fce3243a7dcf448301ee9ffd392}{malloc}} (size\+\_\+t \mbox{\hyperlink{primitives_8h_aaba88b24a21a6c70c895c0d55f4a69a0}{size}})
+\item 
+void $\ast$ \mbox{\hyperlink{uefi_8h_add8a2c74f2c5f5e3db163234988f61d6}{calloc}} (size\+\_\+t count, size\+\_\+t \mbox{\hyperlink{primitives_8h_aaba88b24a21a6c70c895c0d55f4a69a0}{size}})
+\item 
+void \mbox{\hyperlink{uefi_8h_afbedc913aa4651b3c3b4b3aecd9b4711}{free}} (void $\ast$ptr)
+\item 
+void $\ast$ \mbox{\hyperlink{uefi_8h_af0f04eaea46a7092d26cdb0232c87381}{memcpy}} (void $\ast$restrict dest, const void $\ast$restrict src, size\+\_\+t count)
+\item 
+void $\ast$ \mbox{\hyperlink{uefi_8h_a7aa30b35a2545ebe6287efa3b2d2a17a}{memfill}} (void $\ast$restrict dest, uint8\+\_\+t rep, size\+\_\+t count)
+\item 
+size\+\_\+t \mbox{\hyperlink{uefi_8h_a4216be6d4c97e21a59874c607c8d9621}{memset}} (void $\ast$restrict buf, size\+\_\+t length, uint8\+\_\+t value)
+\item 
+int \mbox{\hyperlink{uefi_8h_a12295afff8c3b5fbb9874d4288a7ed9a}{strchr}} (const char $\ast$str, const char chr, size\+\_\+t index)
+\item 
+size\+\_\+t \mbox{\hyperlink{uefi_8h_af96b88b4ca29d66f44938ccb9d592826}{strcnt}} (const char $\ast$str, const char chr)
+\item 
+size\+\_\+t \mbox{\hyperlink{uefi_8h_a008e171a518fe0e0352f31b245e03875}{strlen}} (const char $\ast$str)
+\item 
+size\+\_\+t \mbox{\hyperlink{uefi_8h_a2b6104d1163168f1c12848f700e1cd29}{printf}} (const char $\ast$fmt,...)
+\item 
+void \mbox{\hyperlink{uefi_8h_aaf98ef7cdde3a0dfb2e49919de3298b1}{exit}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{uefi_8h_aed73b80e97643a64958aae9e2d7e7740}\label{uefi_8h_aed73b80e97643a64958aae9e2d7e7740}} 
+\index{uefi.h@{uefi.h}!ACPI\_10\_TABLE\_GUID@{ACPI\_10\_TABLE\_GUID}}
+\index{ACPI\_10\_TABLE\_GUID@{ACPI\_10\_TABLE\_GUID}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{ACPI\_10\_TABLE\_GUID}{ACPI\_10\_TABLE\_GUID}}
+{\footnotesize\ttfamily \#define ACPI\+\_\+10\+\_\+\+TABLE\+\_\+\+GUID~\mbox{\hyperlink{uefi_8h_a50a528da5aa77cd9b6fd6d630b19aa6b}{ACPI\+\_\+\+TABLE\+\_\+\+GUID}}}
+
+\mbox{\Hypertarget{uefi_8h_a50a528da5aa77cd9b6fd6d630b19aa6b}\label{uefi_8h_a50a528da5aa77cd9b6fd6d630b19aa6b}} 
+\index{uefi.h@{uefi.h}!ACPI\_TABLE\_GUID@{ACPI\_TABLE\_GUID}}
+\index{ACPI\_TABLE\_GUID@{ACPI\_TABLE\_GUID}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{ACPI\_TABLE\_GUID}{ACPI\_TABLE\_GUID}}
+{\footnotesize\ttfamily \#define ACPI\+\_\+\+TABLE\+\_\+\+GUID~\{0x\+EB9\+D2\+D30,0x2\+D88,0x11\+D3,\{0x9A,0x16,0x00,0x90,0x27,0x3F,0x\+C1,0x4D\}\}}
+
+\mbox{\Hypertarget{uefi_8h_ac2fea1641e55c1e7b878d2b508a9f0d3}\label{uefi_8h_ac2fea1641e55c1e7b878d2b508a9f0d3}} 
+\index{uefi.h@{uefi.h}!EFI\_ACPI\_20\_TABLE\_GUID@{EFI\_ACPI\_20\_TABLE\_GUID}}
+\index{EFI\_ACPI\_20\_TABLE\_GUID@{EFI\_ACPI\_20\_TABLE\_GUID}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{EFI\_ACPI\_20\_TABLE\_GUID}{EFI\_ACPI\_20\_TABLE\_GUID}}
+{\footnotesize\ttfamily \#define EFI\+\_\+\+ACPI\+\_\+20\+\_\+\+TABLE\+\_\+\+GUID~\mbox{\hyperlink{uefi_8h_a9563147a6dd5e2316a9ca3ab8f9c3282}{EFI\+\_\+\+ACPI\+\_\+\+TABLE\+\_\+\+GUID}}}
+
+\mbox{\Hypertarget{uefi_8h_a9563147a6dd5e2316a9ca3ab8f9c3282}\label{uefi_8h_a9563147a6dd5e2316a9ca3ab8f9c3282}} 
+\index{uefi.h@{uefi.h}!EFI\_ACPI\_TABLE\_GUID@{EFI\_ACPI\_TABLE\_GUID}}
+\index{EFI\_ACPI\_TABLE\_GUID@{EFI\_ACPI\_TABLE\_GUID}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{EFI\_ACPI\_TABLE\_GUID}{EFI\_ACPI\_TABLE\_GUID}}
+{\footnotesize\ttfamily \#define EFI\+\_\+\+ACPI\+\_\+\+TABLE\+\_\+\+GUID~\{0x8868\+E871,0x\+E4\+F1,0x11\+D3,\{0x\+BC,0x22,0x00,0x80,0x\+C7,0x3C,0x88,0x81\}\}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{uefi_8h_add8a2c74f2c5f5e3db163234988f61d6}\label{uefi_8h_add8a2c74f2c5f5e3db163234988f61d6}} 
+\index{uefi.h@{uefi.h}!calloc@{calloc}}
+\index{calloc@{calloc}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{calloc()}{calloc()}}
+{\footnotesize\ttfamily void$\ast$ calloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{count,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+This function is used to allocate and zero a memory region for use with data structures. Similar to the C standard library implementation of this function, this function accepts two arguments\+: a {\ttfamily count} or {\ttfamily nmemb} parameter which specifies the number of members of space to allocate, followed by a {\ttfamily size} parameter indicating the size of each member in bytes. Similarly to \mbox{\hyperlink{malloc_8c_a41a55f77c79e9f4122257e4177b6af0f}{malloc()}}, this function returns a {\ttfamily NULL} pointer if the allocation fails for any reason. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{malloc_8c_a41a55f77c79e9f4122257e4177b6af0f}{malloc()}}, \mbox{\hyperlink{malloc_8c_a4216be6d4c97e21a59874c607c8d9621}{memset()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em count} & the number of members to allocate \\
+\hline
+{\em size} & the size of each member in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the allocated and zeroed memory buffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{uefi_8h_aaf98ef7cdde3a0dfb2e49919de3298b1}\label{uefi_8h_aaf98ef7cdde3a0dfb2e49919de3298b1}} 
+\index{uefi.h@{uefi.h}!exit@{exit}}
+\index{exit@{exit}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily void exit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Calls the {\ttfamily Exit\+Boot\+Services(\+EFI\+\_\+\+HANDLE Image\+Handle, UINTN Map\+Key)} function used to terminate EFI boot services and hand control to the operating system. Note that this function {\bfseries{must}} be called with a valid {\ttfamily Map\+Key} reference to a constructed memory map. \mbox{\Hypertarget{uefi_8h_afbedc913aa4651b3c3b4b3aecd9b4711}\label{uefi_8h_afbedc913aa4651b3c3b4b3aecd9b4711}} 
+\index{uefi.h@{uefi.h}!free@{free}}
+\index{free@{free}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily void free (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+Frees a memory allocation provided by {\ttfamily \mbox{\hyperlink{malloc_8c_a41a55f77c79e9f4122257e4177b6af0f}{malloc()}}} or {\ttfamily \mbox{\hyperlink{malloc_8c_ada17db70c1293b5de54f9fb1aabd5e45}{calloc()}}}. Sets the library-\/static {\ttfamily EFI\+\_\+\+STATUS} with the state of the deallocation process. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{malloc_8c_a41a55f77c79e9f4122257e4177b6af0f}{malloc()}}, \mbox{\hyperlink{malloc_8c_ada17db70c1293b5de54f9fb1aabd5e45}{calloc()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{uefi_8h_a9c5e3fbb0911e3e696d1fdc7b014ffc4}\label{uefi_8h_a9c5e3fbb0911e3e696d1fdc7b014ffc4}} 
+\index{uefi.h@{uefi.h}!init@{init}}
+\index{init@{init}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void init (\begin{DoxyParamCaption}\item[{EFI\+\_\+\+HANDLE}]{handle,  }\item[{EFI\+\_\+\+SYSTEM\+\_\+\+TABLE $\ast$}]{table }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \\
+\hline
+{\em table} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{uefi_8h_a7ac38fce3243a7dcf448301ee9ffd392}\label{uefi_8h_a7ac38fce3243a7dcf448301ee9ffd392}} 
+\index{uefi.h@{uefi.h}!malloc@{malloc}}
+\index{malloc@{malloc}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{malloc()}{malloc()}}
+{\footnotesize\ttfamily void$\ast$ malloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+This function wraps the EFI native {\ttfamily Boot\+Services-\/$>$Allocate\+Pool()} function to provide a more user-\/friendly memory allocation interface. This function allocates {\ttfamily size} bytes of memory under the UEFI {\ttfamily Efi\+Loader\+Data} class. Similar to the C standard library versions of {\ttfamily $\ast$malloc()}, this function returns {\ttfamily NULL} if, for any reason, the memory allocation request fails. 
+\begin{DoxyParams}{Parameters}
+{\em size} & the number of bytes of memory to allocate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the allocated memory block 
+\end{DoxyReturn}
+\mbox{\Hypertarget{uefi_8h_af0f04eaea46a7092d26cdb0232c87381}\label{uefi_8h_af0f04eaea46a7092d26cdb0232c87381}} 
+\index{uefi.h@{uefi.h}!memcpy@{memcpy}}
+\index{memcpy@{memcpy}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{memcpy()}{memcpy()}}
+{\footnotesize\ttfamily void$\ast$ memcpy (\begin{DoxyParamCaption}\item[{void $\ast$restrict}]{dest,  }\item[{const void $\ast$restrict}]{src,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{uefi_8h_a7aa30b35a2545ebe6287efa3b2d2a17a}\label{uefi_8h_a7aa30b35a2545ebe6287efa3b2d2a17a}} 
+\index{uefi.h@{uefi.h}!memfill@{memfill}}
+\index{memfill@{memfill}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{memfill()}{memfill()}}
+{\footnotesize\ttfamily void$\ast$ memfill (\begin{DoxyParamCaption}\item[{void $\ast$restrict}]{dest,  }\item[{uint8\+\_\+t}]{rep,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{uefi_8h_a4216be6d4c97e21a59874c607c8d9621}\label{uefi_8h_a4216be6d4c97e21a59874c607c8d9621}} 
+\index{uefi.h@{uefi.h}!memset@{memset}}
+\index{memset@{memset}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{memset()}{memset()}}
+{\footnotesize\ttfamily size\+\_\+t memset (\begin{DoxyParamCaption}\item[{void $\ast$restrict}]{buf,  }\item[{size\+\_\+t}]{length,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{uefi_8h_a2b6104d1163168f1c12848f700e1cd29}\label{uefi_8h_a2b6104d1163168f1c12848f700e1cd29}} 
+\index{uefi.h@{uefi.h}!printf@{printf}}
+\index{printf@{printf}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{printf()}{printf()}}
+{\footnotesize\ttfamily size\+\_\+t printf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{uefi_8h_a12295afff8c3b5fbb9874d4288a7ed9a}\label{uefi_8h_a12295afff8c3b5fbb9874d4288a7ed9a}} 
+\index{uefi.h@{uefi.h}!strchr@{strchr}}
+\index{strchr@{strchr}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{strchr()}{strchr()}}
+{\footnotesize\ttfamily int strchr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{const char}]{chr,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{uefi_8h_af96b88b4ca29d66f44938ccb9d592826}\label{uefi_8h_af96b88b4ca29d66f44938ccb9d592826}} 
+\index{uefi.h@{uefi.h}!strcnt@{strcnt}}
+\index{strcnt@{strcnt}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{strcnt()}{strcnt()}}
+{\footnotesize\ttfamily size\+\_\+t strcnt (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{const char}]{chr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{uefi_8h_a008e171a518fe0e0352f31b245e03875}\label{uefi_8h_a008e171a518fe0e0352f31b245e03875}} 
+\index{uefi.h@{uefi.h}!strlen@{strlen}}
+\index{strlen@{strlen}!uefi.h@{uefi.h}}
+\doxysubsubsection{\texorpdfstring{strlen()}{strlen()}}
+{\footnotesize\ttfamily size\+\_\+t strlen (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
